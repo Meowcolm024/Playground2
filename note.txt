@@ -1,0 +1,1 @@
+TS="supply chain" AND TS = ("Artificial Intelligence" OR "machine learning" OR "Big Data" OR "Internet of Things" OR "Digital Transformation")
