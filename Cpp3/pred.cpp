@@ -4,8 +4,10 @@
 
 using namespace std;
 
-auto f(int x) -> decltype(auto) {
-    return [x](int y) {
+auto f(int x) -> decltype(auto)
+{
+    return [x](int y)
+    {
         return x + y;
     };
 };
@@ -14,7 +16,8 @@ class MyShow
 {
 public:
     virtual void myShow() = 0;
-    virtual void heShow() {
+    virtual void heShow()
+    {
         myShow();
         myShow();
     }
@@ -58,8 +61,9 @@ int main()
 
     cout << f(1)(2) << endl;
 
-    cout << 9/2 << " " << 9.0/2.0 << endl;
-    cout << 9/2.0 << " " << 9.0/2 << endl;
+    cout << 9 / 2 << " " << 9.0 / 2.0 << endl;
+    cout << 9 / 2.0 << " " << 9.0 / 2 << endl;
+    cout << boolalpha << (3 > 4) << noboolalpha << (3 < 4) << endl;
 
     return 0;
 }
