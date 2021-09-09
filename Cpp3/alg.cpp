@@ -13,7 +13,7 @@ template <typename T>
 class List
 {
 public:
-    ListTag tag;
+    const ListTag tag;
     List() = delete;
     List(ListTag t) : tag(t) {}
     virtual ~List() = default;
@@ -30,30 +30,37 @@ template <typename T>
 class Cons : public List<T>
 {
 public:
-    T head;
-    unique_ptr<List<T>> tail;
+    const T head;
+    const unique_ptr<List<T>> tail;
     Cons(T h, unique_ptr<List<T>> t) : List<T>(ListTag::CONS), head(h), tail(move(t)) {}
 };
 
-// unsafeMap: returns a raw pointer (dyn)
-template <typename A, typename B>
-List<B> *unsafeMap(const List<A> *xs, function<B(A)> f)
+// head: destruction function
+template <typename T>
+const T &head(const unique_ptr<List<T>> &xs)
 {
-    if (xs->tag == ListTag::NIL)
+    switch (xs->tag)
     {
-        return dynamic_cast<List<B> *>(new Nil<B>());
-    }
-    else
-    {
-        auto zs = dynamic_cast<const Cons<A> *>(xs);
-        return dynamic_cast<List<B> *>(new Cons<B>(f(zs->head), unique_ptr<List<B>>(unsafeMap(zs->tail.get(), f))));
+    case ListTag::NIL:
+        throw exception();
+    case ListTag::CONS:
+        auto zs = dynamic_cast<const Cons<T> *>(xs.get());
+        return zs->head;
     }
 }
 
-template <typename A, typename B>
-unique_ptr<List<B>> map(const unique_ptr<List<A>> &xs, function<B(A)> f)
+// tail: destruction function
+template <typename T>
+const unique_ptr<List<T>> &tail(const unique_ptr<List<T>> &xs)
 {
-    return unique_ptr<List<B>>(unsafeMap(xs.get(), f));
+    switch (xs->tag)
+    {
+    case ListTag::NIL:
+        throw exception();
+    case ListTag::CONS:
+        auto zs = dynamic_cast<const Cons<T> *>(xs.get());
+        return zs->tail;
+    }
 }
 
 // cons: smart constructor
@@ -70,15 +77,80 @@ unique_ptr<List<T>> nil()
     return unique_ptr<List<T>>(dynamic_cast<List<T> *>(new Nil<T>()));
 }
 
-// unsafeShowList: accepts raw pointer (dyn)
-template <typename T>
-void unsafeShowList(const List<T> *xs)
+template <typename A, typename B>
+unique_ptr<List<B>> map(const unique_ptr<List<A>> &xs, function<B(A)> f)
 {
-    if (xs->tag != ListTag::NIL)
+    switch (xs->tag)
     {
-        auto z = dynamic_cast<const Cons<T> *>(xs);
-        cout << z->head << " ";
-        unsafeShowList(z->tail.get());
+    case ListTag::NIL:
+        return nil<B>();
+    case ListTag::CONS:
+        return cons(f(head(xs)), map(tail(xs), f));
+    }
+}
+
+template <typename T>
+unique_ptr<List<T>> filter(const unique_ptr<List<T>> &xs, function<bool(T)> f)
+{
+    switch (xs->tag)
+    {
+    case ListTag::NIL:
+        return nil<T>();
+    case ListTag::CONS:
+        auto z = head(xs);
+        if (f(z))
+            return cons<T>(z, filter(tail(xs), f));
+        else
+            return filter(tail(xs), f);
+    }
+}
+
+template <typename T>
+unique_ptr<List<T>> append(const unique_ptr<List<T>> &xs, const unique_ptr<List<T>> &ys)
+{
+    switch (xs->tag)
+    {
+    case ListTag::NIL:
+        return copyList(ys);
+    case ListTag::CONS:
+        return cons(head(xs), append(tail(xs), ys));
+    }
+}
+
+template <typename A, typename B>
+unique_ptr<List<B>> flatMap(const unique_ptr<List<A>> &xs, function<unique_ptr<List<B>>(A)> f)
+{
+    switch (xs->tag)
+    {
+    case ListTag::NIL:
+        return nil<B>();
+    case ListTag::CONS:
+        return append<B>(f(head(xs)), flatMap(tail(xs), f));
+    }
+}
+
+template <typename T>
+unique_ptr<List<T>> reverse(const unique_ptr<List<T>> &xs)
+{
+    switch (xs->tag)
+    {
+    case ListTag::NIL:
+        return nil<T>();
+    case ListTag::CONS:
+        return append(reverse(tail(xs)), cons(head(xs), nil<T>()));
+    }
+}
+
+template <typename T>
+void showHelper(const unique_ptr<List<T>> &xs)
+{
+    switch (xs->tag)
+    {
+    case ListTag::NIL:
+        return;
+    case ListTag::CONS:
+        cout << head(xs) << " ";
+        showHelper(tail(xs));
     }
 }
 
@@ -86,29 +158,29 @@ template <typename T>
 void showList(const unique_ptr<List<T>> &xs)
 {
     cout << "[ ";
-    unsafeShowList(xs.get());
+    showHelper(xs);
     cout << "]" << endl;
 }
 
 template <typename T>
 unique_ptr<List<T>> copyList(const unique_ptr<List<T>> &xs)
 {
-    if (xs->tag == ListTag::NIL)
+    switch (xs->tag)
     {
+    case ListTag::CONS:
+        return cons(head(xs), copyList(tail(xs)));
+    case ListTag::NIL:
         return nil<T>();
-    }
-    else
-    {
-        auto z = dynamic_cast<const Cons<T> *>(xs.get());
-        return cons<T>(z->head, copyList(z->tail));
     }
 }
 
 int main()
 {
     auto l1 = cons(1, cons(2, cons(3, nil<int>())));
-    auto l2 = map<int, int>(cons(0, copyList(l1)), [](int x)
-                            { return x + 1; });
+    auto l2 = filter<int>(map<int, int>(cons(0, copyList(l1)), [](int x)
+                                        { return x + 1; }),
+                          [](int x)
+                          { return x > 2; });
     auto l3 = nil<int>();
     auto l4 = map<int, int>(l3, [](int x)
                             { return x; });
@@ -117,6 +189,14 @@ int main()
     showList(l2);
     showList(l3);
     showList(l4);
+    showList(
+        reverse(
+            flatMap<int, int>(
+                append(l1, l2),
+                [](int x)
+                { return cons(x, cons(x, nil<int>())); })));
+
+    cout << head(l1) << endl;
 
     return 0;
 }
