@@ -3,6 +3,11 @@
 #include <memory>
 using namespace std;
 
+template<typename T> class List;
+
+template<typename T>
+using ListPtr = unique_ptr<List<T>>;
+
 enum class ListTag
 {
     NIL,
@@ -31,13 +36,13 @@ class Cons : public List<T>
 {
 public:
     const T head;
-    const unique_ptr<List<T>> tail;
-    Cons(T h, unique_ptr<List<T>> t) : List<T>(ListTag::CONS), head(h), tail(move(t)) {}
+    const ListPtr<T> tail;
+    Cons(T h, ListPtr<T> t) : List<T>(ListTag::CONS), head(h), tail(move(t)) {}
 };
 
 // head: destruction function
 template <typename T>
-const T &head(const unique_ptr<List<T>> &xs)
+const T &head(const ListPtr<T> &xs)
 {
     switch (xs->tag)
     {
@@ -51,7 +56,7 @@ const T &head(const unique_ptr<List<T>> &xs)
 
 // tail: destruction function
 template <typename T>
-const unique_ptr<List<T>> &tail(const unique_ptr<List<T>> &xs)
+const ListPtr<T> &tail(const ListPtr<T> &xs)
 {
     switch (xs->tag)
     {
@@ -65,20 +70,20 @@ const unique_ptr<List<T>> &tail(const unique_ptr<List<T>> &xs)
 
 // cons: smart constructor
 template <typename T>
-unique_ptr<List<T>> cons(T h, unique_ptr<List<T>> t)
+ListPtr<T> cons(T h, ListPtr<T> t)
 {
-    return unique_ptr<List<T>>(dynamic_cast<List<T> *>(new Cons<T>(h, move(t))));
+    return ListPtr<T>(dynamic_cast<List<T> *>(new Cons<T>(h, move(t))));
 }
 
 // nil: smart constractor
 template <typename T>
-unique_ptr<List<T>> nil()
+ListPtr<T> nil()
 {
-    return unique_ptr<List<T>>(dynamic_cast<List<T> *>(new Nil<T>()));
+    return ListPtr<T>(dynamic_cast<List<T> *>(new Nil<T>()));
 }
 
 template <typename A, typename B>
-unique_ptr<List<B>> map(const unique_ptr<List<A>> &xs, function<B(A)> f)
+ListPtr<B> map(const ListPtr<A> &xs, function<B(A)> f)
 {
     switch (xs->tag)
     {
@@ -90,7 +95,7 @@ unique_ptr<List<B>> map(const unique_ptr<List<A>> &xs, function<B(A)> f)
 }
 
 template <typename T>
-unique_ptr<List<T>> filter(const unique_ptr<List<T>> &xs, function<bool(T)> f)
+ListPtr<T> filter(const ListPtr<T> &xs, function<bool(T)> f)
 {
     switch (xs->tag)
     {
@@ -106,7 +111,7 @@ unique_ptr<List<T>> filter(const unique_ptr<List<T>> &xs, function<bool(T)> f)
 }
 
 template <typename T>
-unique_ptr<List<T>> append(const unique_ptr<List<T>> &xs, const unique_ptr<List<T>> &ys)
+ListPtr<T> append(const ListPtr<T> &xs, const ListPtr<T> &ys)
 {
     switch (xs->tag)
     {
@@ -118,7 +123,7 @@ unique_ptr<List<T>> append(const unique_ptr<List<T>> &xs, const unique_ptr<List<
 }
 
 template <typename A, typename B>
-unique_ptr<List<B>> flatMap(const unique_ptr<List<A>> &xs, function<unique_ptr<List<B>>(A)> f)
+ListPtr<B> flatMap(const ListPtr<A> &xs, function<ListPtr<B>(A)> f)
 {
     switch (xs->tag)
     {
@@ -130,7 +135,7 @@ unique_ptr<List<B>> flatMap(const unique_ptr<List<A>> &xs, function<unique_ptr<L
 }
 
 template <typename T>
-unique_ptr<List<T>> reverse(const unique_ptr<List<T>> &xs)
+ListPtr<T> reverse(const ListPtr<T> &xs)
 {
     switch (xs->tag)
     {
@@ -142,7 +147,7 @@ unique_ptr<List<T>> reverse(const unique_ptr<List<T>> &xs)
 }
 
 template <typename T>
-void showHelper(const unique_ptr<List<T>> &xs)
+void showHelper(const ListPtr<T> &xs)
 {
     switch (xs->tag)
     {
@@ -155,7 +160,7 @@ void showHelper(const unique_ptr<List<T>> &xs)
 }
 
 template <typename T>
-void showList(const unique_ptr<List<T>> &xs)
+void showList(const ListPtr<T> &xs)
 {
     cout << "[ ";
     showHelper(xs);
@@ -163,7 +168,7 @@ void showList(const unique_ptr<List<T>> &xs)
 }
 
 template <typename T>
-unique_ptr<List<T>> copyList(const unique_ptr<List<T>> &xs)
+ListPtr<T> copyList(const ListPtr<T> &xs)
 {
     switch (xs->tag)
     {
