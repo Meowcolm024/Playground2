@@ -14,7 +14,7 @@ if' :: Bool -> p -> p -> p
 if' True  a _ = a
 if' False _ p = p
 
-while :: Monad m => m Bool -> m a -> m ()
-while p e = do
-    x <- p
-    if x then e >> while p e else return ()
+-- while :: Monad m => m Bool -> m a -> m ()
+-- while p e = do
+--     x <- p
+--     if x then e >> while p e else return ()
