@@ -88,13 +88,26 @@ void showList(const unique_ptr<List<T>> &xs)
     cout << "[ ";
     unsafeShowList(xs.get());
     cout << "]" << endl;
-    ;
+}
+
+template <typename T>
+unique_ptr<List<T>> copyList(const unique_ptr<List<T>> &xs)
+{
+    if (xs->tag == ListTag::NIL)
+    {
+        return nil<T>();
+    }
+    else
+    {
+        auto z = dynamic_cast<const Cons<T> *>(xs.get());
+        return cons<T>(z->head, copyList(z->tail));
+    }
 }
 
 int main()
 {
     auto l1 = cons(1, cons(2, cons(3, nil<int>())));
-    auto l2 = map<int, int>(l1, [](int x)
+    auto l2 = map<int, int>(cons(0, copyList(l1)), [](int x)
                             { return x + 1; });
     auto l3 = nil<int>();
     auto l4 = map<int, int>(l3, [](int x)
