@@ -3,9 +3,10 @@
 #include <memory>
 using namespace std;
 
-template<typename T> class List;
+template <typename T>
+class List;
 
-template<typename T>
+template <typename T>
 using ListPtr = unique_ptr<List<T>>;
 
 enum class ListTag
@@ -37,7 +38,9 @@ class Cons : public List<T>
 public:
     const T head;
     const ListPtr<T> tail;
-    Cons(T h, ListPtr<T> t) : List<T>(ListTag::CONS), head(h), tail(move(t)) {}
+    Cons(T h, ListPtr<T> t) : List<T>(ListTag::CONS),
+                              head(h),
+                              tail(move(t)) {}
 };
 
 // head: destruction function
@@ -146,6 +149,30 @@ ListPtr<T> reverse(const ListPtr<T> &xs)
     }
 }
 
+template <typename A, typename B>
+B foldl(const ListPtr<A> &xs, B z, function<B(B, A)> f)
+{
+    switch (xs->tag)
+    {
+    case ListTag::NIL:
+        return z;
+    case ListTag::CONS:
+        return foldl(tail(xs), f(z, head(xs)), f);
+    }
+}
+
+template <typename A, typename B>
+B foldr(const ListPtr<A> &xs, B z, function<B(A, B)> f)
+{
+    switch (xs->tag)
+    {
+    case ListTag::NIL:
+        return z;
+    case ListTag::CONS:
+        return f(head(xs), foldr(tail(xs), z, f));
+    }
+}
+
 template <typename T>
 void showHelper(const ListPtr<T> &xs)
 {
@@ -182,26 +209,33 @@ ListPtr<T> copyList(const ListPtr<T> &xs)
 int main()
 {
     auto l1 = cons(1, cons(2, cons(3, nil<int>())));
-    auto l2 = filter<int>(map<int, int>(cons(0, copyList(l1)), [](int x)
-                                        { return x + 1; }),
-                          [](int x)
-                          { return x > 2; });
+    auto l2 = filter<int>(
+        map<int, int>(
+            cons(0, copyList(l1)),
+            [](int x)
+            { return x + 1; }),
+        [](int x)
+        { return x > 2; });
     auto l3 = nil<int>();
     auto l4 = map<int, int>(l3, [](int x)
                             { return x; });
+
+    auto l5 = reverse(
+        flatMap<int, int>(
+            append(l1, l2),
+            [](int x)
+            { return cons(x, cons(x, nil<int>())); }));
 
     showList(l1);
     showList(l2);
     showList(l3);
     showList(l4);
-    showList(
-        reverse(
-            flatMap<int, int>(
-                append(l1, l2),
-                [](int x)
-                { return cons(x, cons(x, nil<int>())); })));
+    showList(l5);
 
     cout << head(l1) << endl;
+    cout << foldr<int, int>(l5, 0, [](int x, int y)
+                            { return x + y; })
+         << endl;
 
     return 0;
 }
