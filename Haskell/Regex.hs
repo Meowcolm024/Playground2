@@ -21,6 +21,7 @@ _         +++ ry        = ry
 
 matchRegEx :: RegMatch a
 matchRegEx Epsilon []                 = (A, [])
+matchRegEx Epsilon es                 = (P, es)
 matchRegEx (Atom x) (e : es) | x == e = (A, es)
 matchRegEx (Or rx ry) es              = matchRegEx rx es +++ matchRegEx ry es
 matchRegEx (Then rx ry) es
@@ -38,8 +39,10 @@ match r e | (A, x@(_ : _)) <- result = (O, x)
           | otherwise                = result
     where result = matchRegEx r e
 
+-- >>> match zeros [0,1,0,0]
+-- (A,[])
 zeros :: RegInt
-zeros = Then (Atom 0) (Star (Atom 0))
+zeros = Then (Then (Atom 0) (Or (Atom 1) Epsilon)) (Star (Atom 0))
 
 aabbs :: RegChr
 aabbs = Then (Star (Atom 'a')) (Atom 'b')
