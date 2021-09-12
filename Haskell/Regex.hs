@@ -1,7 +1,11 @@
 {-# LANGUAGE RankNTypes #-}
 module Haskell.Regex where
 
-data Result = A | O | P deriving Show
+-- ! matched info lost
+data Result = A     -- ^ Accepted
+            | O     -- ^ Objected
+            | P     -- ^ Pending
+            deriving Show
 
 data RegEx a = Epsilon
              | Atom a
@@ -27,9 +31,10 @@ matchRegEx (Then rx ry) es
     | (A, es') <- matchRegEx rx es = matchRegEx ry es'
     | (P, es') <- matchRegEx rx es = matchRegEx ry es'
 matchRegEx (Star _) [] = (A, [])
-matchRegEx s@(Star r) es | (A, []) <- matchRegEx r es  = (A, [])
-                         | (A, es') <- matchRegEx r es = matchRegEx s es'
-                         | (O, es') <- matchRegEx r es = (P, es')
+matchRegEx s@(Star r) es | (A, []) <- result  = (A, [])
+                         | (A, es') <- result = matchRegEx s es'
+                         | (O, es') <- result = (P, es')
+    where result = matchRegEx r es
 matchRegEx _ es = (O, es)
 
 match :: RegMatch a
@@ -43,8 +48,10 @@ match r e | (A, x@(_ : _)) <- result = (O, x)
 zeros :: RegEx Int
 zeros = Then (Then (Atom 0) (Or (Atom 1) Epsilon)) (Star (Atom 0))
 
+-- >>> match aabbs "abbbb"
+-- (A,"")
 aabbs :: RegEx Char
-aabbs = Then (Star (Atom 'a')) (Atom 'b')
+aabbs = Then (Star (Atom 'a')) (Star (Atom 'b'))
 
 alpha :: RegEx Char
 alpha = foldl1 Or . map Atom $ ['a' .. 'z'] ++ ['0' .. '9']
