@@ -20,9 +20,8 @@ dp xs = result ! length xs
         writeArray mark 0 True
         forM_ [1 .. length xs] $ \p -> do
             m <- readArray mark p
-            when m $ do
-                forM_ [p .. length xs]
-                    $ \q -> when (something xs p q) $ writeArray mark q True
+            when m $ forM_ [p .. length xs] $ \q ->
+                when (something xs p q) $ writeArray mark q True
         return mark
 
 something :: [a] -> Int -> Int -> Bool
