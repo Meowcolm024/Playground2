@@ -1,9 +1,9 @@
 module Haskell.BackTracking where
 
-import           Data.Char
--- import           Control.Applicative
--- import           Control.Monad
 import           Data.List
+
+for :: Functor f => f a -> (a -> b) -> f b
+for = flip fmap
 
 -- >>> subsetSum [8,6,7,5,3,10,9] 15
 -- True
@@ -35,5 +35,6 @@ isWord xs = length xs >= 3 && xs == reverse xs
 -- False
 splittable :: String -> Bool
 splittable [] = True
-splittable xs = or $ flip map [1 .. length xs] $ \i ->
-  isWord (take i xs) && splittable (drop i xs)
+splittable xs =
+  or $ for [1 .. length xs] $ \i -> isWord (take i xs) && splittable (drop i xs)
+
