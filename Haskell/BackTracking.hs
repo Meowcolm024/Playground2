@@ -28,13 +28,13 @@ constructSubset (x : xs) t  = map (x :) y `union` z
 
 -- >>> map isWord ["123", "233332"]
 -- [False,True]
-isWord :: String -> Bool
-isWord xs = length xs >= 3 && xs == reverse xs
+isWord' :: String -> Bool
+isWord' xs = length xs >= 3 && xs == reverse xs
 
 -- >>> splittable "12332112210"
 -- False
-splittable :: String -> Bool
-splittable [] = True
-splittable xs =
-  or $ for [1 .. length xs] $ \i -> isWord (take i xs) && splittable (drop i xs)
+splittable :: (String -> Bool) -> String -> Bool
+splittable _      [] = True
+splittable isWord xs = or $ for [1 .. length xs] $ \i ->
+  isWord (take i xs) && splittable isWord (drop i xs)
 

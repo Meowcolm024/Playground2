@@ -16,7 +16,7 @@ constexpr unsigned long fact(unsigned long a)
     return (a == 0) ? 1 : a * fact(a - 1);
 }
 
-constexpr auto fact5 = fact(5);
+constexpr auto fact5 = fact(15);
 
 auto hello(int a, int b) -> decltype(auto)
 {

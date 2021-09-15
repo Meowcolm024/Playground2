@@ -1,68 +1,56 @@
 {-# LANGUAGE RankNTypes #-}
 module Haskell.Regex where
 
--- ! matched info lost
-data Result = A     -- ^ Accepted
-            | O     -- ^ Objected
-            | P     -- ^ Pending
-            deriving Show
-
-data RegEx a = Epsilon
+data RegEx a = Failure
+             | Epsilon
              | Atom a
              | Or (RegEx a) (RegEx a)
              | Then (RegEx a) (RegEx a)
              | Star (RegEx a)
              deriving Show
 
-type RegMatch a = forall a . Eq a => RegEx a -> [a] -> (Result, [a])
+nullable :: RegEx a -> Bool
+nullable Failure    = False
+nullable Epsilon    = True
+nullable (Atom _  ) = False
+nullable (Or   p q) = nullable p || nullable q
+nullable (Then p q) = nullable p && nullable q
+nullable (Star _  ) = True
 
-(+++) :: (Result, [a]) -> (Result, [a]) -> (Result, [a])
-rx@(A, _) +++ _         = rx
-(   P, _) +++ ry@(A, _) = ry
-_         +++ ry        = ry
+isProductive :: RegEx a -> Bool
+isProductive Failure    = False
+isProductive (Then p q) = isProductive p && isProductive q
+isProductive (Or   p q) = isProductive p || isProductive q
+isProductive _          = True
 
--- ! seems not able to handle nested stars
-matchRegEx :: RegMatch a
-matchRegEx Epsilon []                 = (A, [])
-matchRegEx Epsilon es                 = (P, es)
-matchRegEx (Atom x) (e : es) | x == e = (A, es)
-matchRegEx (Or rx ry) es              = matchRegEx rx es +++ matchRegEx ry es
-matchRegEx (Then rx ry) es
-    | (A, es') <- matchRegEx rx es = matchRegEx ry es'
-    | (P, es') <- matchRegEx rx es = matchRegEx ry es'
-matchRegEx (Star _) [] = (A, [])
-matchRegEx s@(Star r) es | (A, []) <- result  = (A, [])
-                         | (A, es') <- result = matchRegEx s es'
-                         | (O, es') <- result = (P, es')
-    where result = matchRegEx r es
-matchRegEx _ es = (O, es)
+derive :: Eq a => RegEx a -> a -> RegEx a
+derive reg c = work reg
+ where
+  work Failure  = Failure
+  work Epsilon  = Failure
+  work (Atom x) = if x == c then Epsilon else Failure
+  work (Or p q) = Or (work p) (work q)
+  work (Then p q) =
+    let w = Then (work p) q in if nullable p then Or w (work q) else w
+  work (Star s) = Then (work s) (Star s)
 
-match :: RegMatch a
-match r e | (A, x@(_ : _)) <- result = (O, x)
-          | (P, x) <- result         = (O, x)
-          | otherwise                = result
-    where result = matchRegEx r e
+accepts :: Eq a => RegEx a -> [a] -> Bool
+accepts e []      = nullable e
+accepts e (c : w) = accepts (derive e c) w
 
--- >>> match zeros [0,1,0,0]
--- (A,[])
+-- >>> accepts zeros [0]
+-- True
 zeros :: RegEx Int
 zeros = Then (Then (Atom 0) (Or (Atom 1) Epsilon)) (Star (Atom 0))
 
--- >>> match aabbs "abbbb"
--- (A,"")
+-- >>> accepts aabbs "abbaa"
+-- False
 aabbs :: RegEx Char
 aabbs = Then (Star (Atom 'a')) (Star (Atom 'b'))
 
 alpha :: RegEx Char
 alpha = foldl1 Or . map Atom $ ['a' .. 'z'] ++ ['0' .. '9']
 
--- >>> match email "helloworld@mail.com"
--- (A,"")
 email :: RegEx Char
 email = Then (Then alphas (Atom '@')) (Then alphas (Then (Atom '.') alphas))
-    where alphas = Then alpha (Star alpha)
-
--- >>> match (Star (Then (Atom 0) (Atom 1))) [0,1,0,1,0,1]
--- (A,[])
--- >>> match alpha "a1"
--- (O,"1")
+  where alphas = Then alpha (Star alpha)
