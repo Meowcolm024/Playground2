@@ -1,6 +1,8 @@
 {-# LANGUAGE RankNTypes #-}
 module Haskell.Regex where
 
+import Control.Applicative
+
 data RegEx a = Failure
              | Epsilon
              | Atom a
@@ -23,8 +25,8 @@ isProductive (Then p q) = isProductive p && isProductive q
 isProductive (Or   p q) = isProductive p || isProductive q
 isProductive _          = True
 
-derive :: Eq a => RegEx a -> a -> RegEx a
-derive reg c = work reg
+derive :: Eq a => a -> RegEx a -> RegEx a
+derive c = work
  where
   work Failure  = Failure
   work Epsilon  = Failure
@@ -36,10 +38,22 @@ derive reg c = work reg
 
 accepts :: Eq a => RegEx a -> [a] -> Bool
 accepts e []      = nullable e
-accepts e (c : w) = accepts (derive e c) w
+accepts e (c : w) = accepts (derive c e) w
 
--- >>> accepts zeros [0]
--- True
+derivatives :: Eq a => RegEx a -> [a] -> Maybe (RegEx a)
+derivatives = (valid .) . foldl (flip derive)
+  where
+    valid Failure = Nothing 
+    valid Epsilon = Just Epsilon
+    valid a@(Atom _) = Just a
+    valid (Or p q)  = valid p <|> valid q 
+    valid (Then p q) = case valid p of
+      Just p -> Then p <$> valid q
+      Nothing -> Nothing 
+    valid (Star s) = Star <$> valid s
+
+-- >>> accepts zeros [0,0,0,1,0]
+-- False
 zeros :: RegEx Int
 zeros = Then (Then (Atom 0) (Or (Atom 1) Epsilon)) (Star (Atom 0))
 
@@ -54,3 +68,9 @@ alpha = foldl1 Or . map Atom $ ['a' .. 'z'] ++ ['0' .. '9']
 email :: RegEx Char
 email = Then (Then alphas (Atom '@')) (Then alphas (Then (Atom '.') alphas))
   where alphas = Then alpha (Star alpha)
+
+t1, t2, t3, t4 :: RegEx Char
+t1 = Then (Atom 'a') (Star (Then (Atom 'a') (Atom 'b')))
+t2 = Then (Star (Atom 'b')) (Star (Then (Atom 'a') (Atom 'c')))
+t3 = Then (Atom 'c') (Then (Atom 'b') (Atom 'a'))
+t4 = Then (Atom 'c') (Star (Atom 'c'))
