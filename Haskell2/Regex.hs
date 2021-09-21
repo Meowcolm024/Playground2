@@ -1,7 +1,7 @@
 {-# LANGUAGE RankNTypes #-}
-module Haskell.Regex where
+module Haskell2.Regex where
 
-import Control.Applicative
+import           Control.Applicative
 
 data RegEx a = Failure
              | Epsilon
@@ -42,15 +42,13 @@ accepts e (c : w) = accepts (derive c e) w
 
 derivatives :: Eq a => RegEx a -> [a] -> Maybe (RegEx a)
 derivatives = (valid .) . foldl (flip derive)
-  where
-    valid Failure = Nothing 
-    valid Epsilon = Just Epsilon
-    valid a@(Atom _) = Just a
-    valid (Or p q)  = valid p <|> valid q 
-    valid (Then p q) = case valid p of
-      Just p -> Then p <$> valid q
-      Nothing -> Nothing 
-    valid (Star s) = Star <$> valid s
+ where
+  valid Failure      = Nothing
+  valid Epsilon      = Just Epsilon
+  valid a@(Atom _  ) = Just a
+  valid (  Or   p q) = valid p <|> valid q
+  valid (  Then p q) = Then <$> valid p <*> valid q
+  valid (  Star s  ) = Star <$> valid s
 
 -- >>> accepts zeros [0,0,0,1,0]
 -- False
