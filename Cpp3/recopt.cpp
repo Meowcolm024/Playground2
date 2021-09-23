@@ -27,11 +27,11 @@ int main()
 {
     using namespace std;
 
-    // auto x = sumfrom(2333333, 0);
-    // cout << x << endl;
+    auto x = sumfrom(2333333, 0);
+    cout << x << endl;
 
-    auto y = exp(2, 10);
-    cout << y << endl;
+    // auto y = exp(2, 10);
+    // cout << y << endl;
 
     return 0;
 }
