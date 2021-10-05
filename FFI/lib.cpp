@@ -1,5 +1,7 @@
 #include <iostream>
 
+// clang++ -fPIC -shared -o libTest.so lib.cpp
+
 int Function(int num) 
 {
     std::cout << "Num = " << num << std::endl;
