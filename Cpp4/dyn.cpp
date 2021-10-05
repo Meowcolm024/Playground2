@@ -9,9 +9,10 @@ int main() {
     auto y = new int(3);
     cout << y << endl;
     delete y;
-    
+
     // ! DANGEROUS
     *y = 100;
+
     auto z = new int;
     cout << *z << endl;
     delete z;
