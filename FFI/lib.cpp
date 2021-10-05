@@ -1,16 +1,17 @@
 #include <iostream>
+#include "lib.hpp"
 
 // clang++ -fPIC -shared -o libTest.so lib.cpp
 
-int Function(int num) 
+void cpphello(int n)
 {
-    std::cout << "Num = " << num << std::endl;
-    return 0;
+    for (int i = 0; i < n; i++)
+        std::cout << "Hello World" << std::endl;
 }
 
-extern "C" {
-    int MyFunction(int a)
-    {
-        return Function(a);
+extern "C"
+{
+    void hello(int n) {
+        cpphello(n);
     }
 }
