@@ -8,4 +8,4 @@ handle = ctypes.CDLL(dir_path + "/libTest.so")
 handle.hello.argtypes = [ctypes.c_int] 
   
 def hello(num):
-    handle.hello(num) 
+    handle.hello(num)
