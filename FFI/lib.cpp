@@ -15,6 +15,15 @@ void cppArr(const int* arr, int n) {
     std::cout << std::endl;
 }
 
+void cppStruct(const MyStruct* s) {
+    std::cout << "MyStruct { "
+              << "d = " << s->d
+              << ", c = " << s->c
+              << ", i = " << s->i
+              << " }\n";
+
+}
+
 extern "C"
 {
     void hello(int n) {
@@ -32,5 +41,9 @@ extern "C"
             arr[i] = 0;
         }
         return acc;
+    }
+
+    void printStruct(const MyStruct* s){
+        cppStruct(s);
     }
 }
