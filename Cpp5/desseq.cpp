@@ -12,6 +12,7 @@ struct Droppable
     Droppable(Droppable &&d)
     {
         name = move(d.name);
+        d.name = nullptr;
         cout << "> Constructing via moving " << name << endl;
     }
     ~Droppable() { cout << "> Dropping " << name << endl; }
@@ -22,6 +23,7 @@ struct Droppable
     }
     Droppable& operator=(Droppable&& d) {
         name = move(d.name);
+        d.name = nullptr;
         cout << "> Moving " << name << endl;
         return *this;
     }

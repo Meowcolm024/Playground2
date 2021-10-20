@@ -39,7 +39,6 @@ int main()
     auto b = B{'a', 'b', 'c', 'd'};
 
     memcpy(&a, &b, 4);
-
     printf("A: %d\nB: %c%c%c%c\n", a.a, b.a, b.b, b.c, b.d);
 
     auto c = C();
