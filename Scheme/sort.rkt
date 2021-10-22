@@ -1,3 +1,5 @@
+#lang racket
+
 (define (swap vec a b)
     (define tmp (vector-ref vec a))
     (begin

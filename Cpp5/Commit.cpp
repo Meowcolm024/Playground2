@@ -82,10 +82,28 @@ struct Set
     }
 };
 
+bool isParent(const Commit *p, const Commit *c) {
+    if (!p)
+        return false;
+    else {
+        if (!c)
+            return false;
+        else if (p == c)
+            return true;
+        else
+            return isParent(p, c->parent) || isParent(p, c->second_parent);
+    }
+}
+
 Commit *get_lca(Commit *c1, Commit *c2)
 {
     if (c1 == c2)
         return c1;
+    
+    if (isParent(c1, c2))
+        return c1;
+    else if (isParent(c2, c1))
+        return c2;
 
     Set s = Set();
     s.push(c1, 1);
@@ -100,24 +118,15 @@ int main()
     using std::cout;
     using std::endl;
 
-    //       / 2 - 3  - 4  \ _  
-    // I - 1 - 5 - 6  - 7  - 8  - ?
-    //       \ 9 - 10 - 11 - 12 /
     auto init = Commit(0);
     auto c1 = Commit(1, &init);
-    auto c2 = Commit(2, &c1);
-    auto c5 = Commit(5, &c1);
-    auto c6 = Commit(6, &c5);
-    auto c3 = Commit(3, &c2, &c5);
-    auto c4 = Commit(4, &c3);
-    auto c7 = Commit(7, &c6);
-    auto c8 = Commit(8, &c7, &c4);
-    auto c9 = Commit(9, &c1);
-    auto c10 = Commit(10, &c9);
-    auto c11 = Commit(11, &c10, &c6);
-    auto c12 = Commit(12, &c11);
+    auto c3 = Commit(3, &c1);
+    auto c2 = Commit(2, &c1, &c3);
+    auto c4 = Commit(4, &c2);
+    auto c6 = Commit(6, &c3, &c4);
+    auto c5 = Commit(5, &c6);
    
-    auto common = get_lca(&c1, &c9);
+    auto common = get_lca(&c2, &c5);
 
     if (common)
         cout << common->index << endl;

@@ -1,3 +1,5 @@
+#lang racket
+
 (define (assign var type) (list 'type var type))
 (define (get-type var) (caddr var))
 (define (typed? var)

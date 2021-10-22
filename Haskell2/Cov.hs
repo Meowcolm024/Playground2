@@ -7,9 +7,12 @@ type RegionList = Map.Map Code Region
 type Viewer = (Code, Date, PackedData -> Integer)
 
 data PackedData = PackedData
-    { cases   :: Integer
-    , deaths  :: Integer
-    , vaccine :: Integer
+    { cases     :: Integer
+    , casesPM   :: Integer
+    , deaths    :: Integer
+    , deathsPM  :: Integer
+    , vaccine   :: Integer
+    , vaccinePM :: Integer
     }
     deriving Show
 
@@ -23,20 +26,3 @@ data Region = Region
 getCovidData :: RegionList -> Viewer -> Maybe Integer
 getCovidData rl (c, d, f) =
     f <$> (Map.lookup c rl >>= Map.lookup d . covidData)
-
-
-qsort :: Ord a => [a] -> [a]
-qsort []       = []
-qsort (x : xs) = qsort (filter (< x) xs) ++ [x] ++ qsort (filter (>= x) xs)
-
-merge :: Ord a => [a] -> [a] -> [a]
-merge xs [] = xs
-merge [] ys = ys
-merge (x : xs) (y : ys) =
-    if x < y then x : merge xs (y : ys) else y : merge (x : xs) ys
-
-msort :: Ord a => [a] -> [a]
-msort []  = []
-msort [x] = [x]
-msort xs =
-    let (l, r) = splitAt (length xs `div` 2) xs in merge (msort l) (msort r)
