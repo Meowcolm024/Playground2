@@ -1,70 +1,83 @@
 #lang racket
 
-(define (assign var type) (list 'type var type))
-(define (get-type var) (caddr var))
-(define (typed? var)
-    (and (pair? var) (eq? (car var) 'type)))
+(define (assign v t) (cons v t))
+(define (val v) (car v))
+(define (type v) (cdr v))
+(define (has-type v ty) (if (pair? v) (eq? (type v) ty) #f))
+(define (eq-type? x y) (if (and (pair? x) (pair? y)) (eq? (type x) (type y)) #f))
 
-(define (infer-type var)
-    (cond 
-        ((typed? var) (get-type var))
-        ((number? var) 'Int)
-        ((string? var) 'String)
-        ((func? var)   (infer-func-type var))
-        ((pair? var)   (make-pair-type (car var) (cdr var)))
-        ((eq? var '()) 'Nil)
-        (else 'type-error)))
+;; typed functions (construction only)
 
-(define (func? f) 
-    (if (typed? f) 
-        (eq? (car (get-type f)) '->) 
-        (and (pair? f) (eq? (car f) '=>))))
+(define (add x y) 
+    (if (and (has-type x 'int) (has-type y 'int))
+        (assign (list 'add x y) 'int)
+        'error))
 
-(define (make-pair-type a b)
-    (let ((p (infer-type a)) 
-          (q (infer-type b)))
-        (if (or (eq? p 'type-error) (eq? q 'type-error))
-           'type-error
-           (list 'pair p q))))
+(define (mul x y)
+    (if (and (has-type x 'int) (has-type y 'int))
+        (assign (list 'mul x y) 'int)
+        'error))
 
-(define (infer-func-type f) 
-    (infer-body (caddr f) (cadr f)))
+(define (not-bool x) 
+    (if (eq? (type x) 'bool)
+        (assign (list 'not-bool x) 'bool)
+        'error))
 
-; (define (infer-body body x)
-;     (if (app? body)
-;         (if (primitive-func? (car body))
-;             (if (eq? (cadr body) x)
-;                 (caddr (get-type (car body)))
-;                 'type-error)
-;             (infer-type body))
-;     "infer error"))
+(define (eq-int x y)
+    (if (and (has-type x 'int) (has-type y 'int))
+        (assign (list 'eq-int x y) 'bool)
+        'error))
 
-(define (func-type? f) (and (pair? f) (eq? (car f) '->)))
-(define (arg-type f) (if (func-type? f) (cadr f) 'type-error))
-(define (ret-type f) (if (func-type? f) (caddr f) 'type-error))
+(define (eq-bool x y)
+    (if (and (has-type x 'bool) (has-type y 'bool))
+        (assign (list 'eq-bool x y) 'bool)
+        'error))
 
-(define (app-val f x) (app (infer-type f) (infer-type x)))
+(define (if-else b t1 t2)
+    (if (and (has-type b 'bool) (eq-type? t1 t2))
+        (assign (list 'if-else b t1 t2) (type t1))
+        'error))
 
-(define (app f x)
-    (if (and (func-type? f) (eq? (arg-type f) x))
-        (ret-type f)
-        'type-error))
+;; eval function
 
-(define (app? expr)
-    (and (pair? expr) (func? (car expr))))
+;; eval typed expr
+(define (eval-expr expr)
+    (if (eq? expr 'error)
+        'not-well-typed
+        (eval-raw expr)))
 
-(define (primitive-func? f) (and (pair? f) (eq? (cadr f) '<primitive>)))
+;; helper function
+(define (eval-raw e)
+    (let ((expr (car e)) (ty (cdr e)))
+        (if (list? expr)
+            (cond
+                ((eq? (val expr) 'add) 
+                    (assign (+ (val (eval-raw (cadr expr))) (val (eval-raw (caddr expr)))) ty))
+                ((eq? (val expr) 'mul) 
+                    (assign (* (val (eval-raw (cadr expr))) (val (eval-raw (caddr expr)))) ty))
+                ((eq? (val expr) 'not-bool)
+                    (assign (not (val (eval-raw (cadr expr)))) ty))
+                ((eq? (val expr) 'eq-int)
+                    (assign (= (val (eval-raw (cadr expr))) (val (eval-raw (caddr expr)))) ty))
+                ((eq? (val expr) 'eq-bool)
+                    (assign (eq? (val (eval-raw (cadr expr))) (val (eval-raw (caddr expr)))) ty))
+                ((eq? (val expr) 'if-else)
+                    (let ((c (eval-raw (cadr expr))))
+                        (cond 
+                            ((eq? (car c) #t) (eval-raw (caddr expr)))
+                            ((eq? (car c) #f) (eval-raw (cadddr expr)))
+                            (else 'eval-error))))
+                (else 'eval-error))
+            e   ;; primitive
+    )))
 
-(define succ (assign '<primitive> '(-> Int Int)))
-(define add  (assign '<primitive> '(-> Int (-> Int Int))))
+;; def
 
-(define primitves '(succ add))
+(define t (assign #t 'bool))    ;; primitive
+(define f (assign #f 'bool))    ;; primitive
 
-(define (process expr)
-    (define (helper x)
-        (cond 
-            ((list? x) (map helper x))
-            (else (if (member x primitves) (eval x) x))))
-    (map helper expr))
-
-(define (reload) (load "simple.scm"))
+(define a (assign 1 'int))
+(define b (assign 2 'int))
+(define e1 (if-else 
+    (eq-int a b) (add a b)
+    (if-else (not-bool (eq-bool t f)) (mul (add b a) b) (mul b b))))
