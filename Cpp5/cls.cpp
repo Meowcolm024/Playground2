@@ -10,7 +10,7 @@ private:
 
 public:
     A() : b(new char('b')) {}
-    
+
     // * memory leak when destructor is not virtual
     virtual ~A()
     {
@@ -26,10 +26,25 @@ public:
 
 class B : public A
 {
+public:
+    B() : A() {}
+    virtual ~B() { cout << "BBB" << endl; };
+    virtual void hi() override
+    {
+        A::hi();
+        cout << "tu tu ru" << endl;
+    }
 };
 
 class C : public B
 {
+public:
+    C() : B() {}
+    virtual ~C() { cout << "bye C" << endl; };
+    virtual void hi() override
+    {
+        cout << "omg!" << endl;
+    }
 };
 
 class D : public A
@@ -67,6 +82,12 @@ void hiiiiiiiiiiii(A *a)
 int main()
 {
     auto d = new D();
-    hiiiiiiiiiiii(d);
+    hiiiiiiiiiiii(move(d));
+
+    A *c = new C();
+    c->hi();
+    dynamic_cast<B *>(c)->B::hi();
+    delete c;
+
     return 0;
 }
