@@ -13,43 +13,36 @@ template <class T>
 class Nothing;
 
 template <class T>
-class Maybe
+struct Maybe
 {
 protected:
     Maybe() = default;
     virtual ~Maybe() = default;
 
 public:
-    virtual std::vector<Just<T> *const> just() { return std::vector<Just<T> *const>(); };
-    virtual std::vector<Nothing<T> *const> nothing() { return std::vector<Nothing<T> *const>(); };
+    virtual std::vector<Just<T> *const> just() noexcept { return std::vector<Just<T> *const>(); };
+    virtual std::vector<Nothing<T> *const> nothing() noexcept { return std::vector<Nothing<T> *const>(); };
 };
 
 template <class T>
-class Just : public Maybe<T>
+struct Just final : public Maybe<T>
 {
-private:
     T value;
 
-public:
     Just(T value) : Maybe<T>(), value(value) {}
-    virtual ~Just() = default;
 
-    T &get() { return value; }
-
-    virtual std::vector<Just<T> *const> just() override
+    virtual std::vector<Just<T> *const> just() noexcept override
     {
         return std::vector<Just<T> *const>{this};
     }
 };
 
 template <class T>
-class Nothing : public Maybe<T>
+struct Nothing final : public Maybe<T>
 {
-public:
     Nothing() : Maybe<T>() {}
-    virtual ~Nothing() = default;
 
-    virtual std::vector<Nothing<T> *const> nothing() override
+    virtual std::vector<Nothing<T> *const> nothing() noexcept override
     {
         return std::vector<Nothing<T> *const>{this};
     }
@@ -59,12 +52,12 @@ template <class T>
 void print(Maybe<T> &y)
 {
     using namespace std;
-    match(i, y.just())
+    for (auto &i : y.just())
     {
-        i->get() += 1;
-        cout << i->get() << endl;
+        i->value += 1;
+        cout << i->value << endl;
     }
-    match(i, y.nothing())
+    for (auto &i : y.nothing())
     {
         cout << "haha" << endl;
     }

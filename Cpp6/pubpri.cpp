@@ -42,5 +42,9 @@ int main()
     delete a;
     delete b;
     delete c;
+
+    cout << typeid(int const * const).name() << endl;
+    cout << typeid(double *).name() << endl;
+
     return 0;
 }
