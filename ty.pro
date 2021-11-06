@@ -1,8 +1,8 @@
 type(unit).
 type(bool).
 type(nat).
-type(arr(_, _)).
-type(star(_, _)).
+type(arr(_, _)).    % function type
+type(star(_, _)).   % tuple (product) type
 
 arr(A, B) :- type(A), type(B).
 star(A, B) :- type(A), type(B).
@@ -51,3 +51,4 @@ welltyped(pair(A, B), star(P, Q)) :- welltyped(A, P), welltyped(B, Q).
 % welltyped(funApp(fun(arr(nat, bool)), zero), T).
 % welltyped(pair(t, pair(u, zero)), T).
 % welltyped(funApp(funApp(fun(arr(nat, arr(nat, star(nat, nat)))), succ(zero)), succ(succ(zero))), T).
+% funApp(funApp(funApp(fun(arr(nat, arr(bool, arr(star(nat, bool), unit)))), zero), t), pair(succ(zero), f)).
