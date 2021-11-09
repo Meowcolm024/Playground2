@@ -21,3 +21,4 @@ instance QuarkBehavior Duck where
 
 instance DuckBehavior Duck where
     swim _ = "swimming"
+
