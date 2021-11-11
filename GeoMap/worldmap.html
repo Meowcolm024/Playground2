@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Measles Choropleth - Europe</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+        integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+        crossorigin=""></script>
+
+    <script type="text/javascript" src="wm.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+
+    <script type="text/javascript">
+
+        var map = L.map('map').setView([53, 13], 4);
+
+        L.tileLayer(
+            "https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}@2x.png" // stamen toner tiles
+        ).addTo(map);
+
+        // we can ffi with this to color using covid info
+        function getColor(d) {
+            return d > 500000000 ? '#b10026' :
+                d > 100000000 ? '#e31a1c' :
+                    d > 50000000 ? '#fc4e2a' :
+                        d > 25000000 ? '#fd8d3c' :
+                            d > 10000000 ? '#feb24c' :
+                                d > 5000000 ? '#fed976' :
+                                    d > 2500000 ? '#ffeda0' :
+                                        d < 2500000 ? '#ffffcc' :
+                                            '#FFFFFF';
+        }
+
+        function style(feature) {
+            return {
+                fillColor: getColor(feature.properties.pop_est),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                fillOpacity: 0.7
+            };
+        }
+
+        L.geoJson(countriesData, { style: style }).addTo(map);
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

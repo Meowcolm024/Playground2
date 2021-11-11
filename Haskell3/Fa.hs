@@ -21,7 +21,7 @@ k :: (forall a b. a -> b) -> t1 -> t2 -> (t3 -> t4 -> t5) -> t5
 k x y z f = f (x y) (x z)
 
 fun :: (forall a. a) -> (forall a. a) -> (forall a. a) -> (forall a. a)
-fun i j k = i i j k  j k
+fun i j k = i (i j) (k j j) k i
 
 -- * WHAT ???????
 d :: (forall a. a) -> (forall a. a)
