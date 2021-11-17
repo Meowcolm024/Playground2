@@ -6,24 +6,25 @@ L.tileLayer(
     "https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}@2x.png" // stamen toner tiles
 ).addTo(map);
 
+// colors ar efixed
+let cs = ['#b10026', '#e31a1c', '#fc4e2a', '#fd8d3c', '#feb24c', '#ffffcc']
+
 // we can ffi with this to color using covid info
 function getColor(d) {
-    return d > 500000000 ? '#b10026' :
-        d > 100000000 ? '#e31a1c' :
-            d > 50000000 ? '#fc4e2a' :
-                d > 25000000 ? '#fd8d3c' :
-                    d > 10000000 ? '#feb24c' :
-                        d > 5000000 ? '#fed976' :
-                            d > 2500000 ? '#ffeda0' :
-                                d < 2500000 ? '#ffffcc' :
-                                    '#FFFFFF';
+    for (var i = 0; i < cs.length; i++) {
+        if (!datapack[d])
+            return '#FFFFFF'
+        if (datapack[d] < gs[i])
+            continue;
+        return cs[i];
+    }
 }
 
 function style(feature) {
     return {
         // get population
         // in the project we will pass data from java using name
-        fillColor: getColor(feature.properties.pop_est),
+        fillColor: getColor(feature.properties.name),
         weight: 2,
         opacity: 1,
         color: 'white',
@@ -65,17 +66,15 @@ var legend = L.control({ position: 'bottomright' });
 
 legend.onAdd = function (map) {
 
-    var div = L.DomUtil.create('div', 'info legend'),
-        // ingetColor
-        grades = [0, 2500000, 5000000, 10000000, 25000000, 50000000, 100000000, 500000000],
-        labels = [];
+    var div = L.DomUtil.create('div', 'info legend')
 
     // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length; i++) {
+    for (var i = 0; i < cs.length; i++) {
         div.innerHTML +=
-            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            '<i style="background:' + cs[i] + '"></i> ' + gs[i] + '<br>';
     }
+
+    div.innerHTML += reportTitle
 
     return div;
 };

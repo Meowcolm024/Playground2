@@ -25,3 +25,9 @@ test = Node (Node (Leaf 1) (Node (Leaf (-1)) (Leaf 3)))
             (Node (Node (Leaf (-4)) (Leaf (-2))) (Leaf 4))
 
 resutl = execState (countPos test) 0
+
+isort []       = []
+isort (x : xs) = ist x (isort xs)
+  where
+    ist y []       = [y]
+    ist t (y : ys) = if t < y then t : y : ys else y : ist t ys
