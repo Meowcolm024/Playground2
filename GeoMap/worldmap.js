@@ -1,15 +1,25 @@
 // script for the world map
 
+/** 
+ * This source code is modified from
+ * https://leafletjs.com/examples/choropleth/ 
+*/
+
 var map = L.map('map').setView([53, 13], 4);
 
-L.tileLayer(
-    "https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}@2x.png" // stamen toner tiles
-).addTo(map);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/light-v9',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map);
 
-// colors ar efixed
+// colors are fixed
 let cs = ['#b10026', '#e31a1c', '#fc4e2a', '#fd8d3c', '#feb24c', '#ffffcc']
 
-// get color
+// get color using iso code are related data
 function getColor(d) {
     if (!datapack[d])
         return '#FFFFFF'
@@ -21,11 +31,10 @@ function getColor(d) {
 
 function style(feature) {
     return {
-        // get population
-        // in the project we will pass data from java using name
         fillColor: getColor(feature.properties.iso_a3),
         weight: 2,
         opacity: 1,
+        dashArray: '3',
         color: 'white',
         fillOpacity: 0.7
     };
@@ -44,10 +53,17 @@ function highlightFeature(e) {
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
         layer.bringToFront();
     }
+
+    let name = layer.feature.properties.name
+    let code = layer.feature.properties.iso_a3
+    info.update(name, datapack[code]);
 }
+
+var geojson
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
+    info.update();
 }
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
@@ -61,6 +77,27 @@ function onEachFeature(feature, layer) {
     });
 }
 
+// ---------
+
+var info = L.control();
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+    this.update();
+    return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+info.update = function (x, y) {
+    this._div.innerHTML = '<h4>Covid Data</h4>' + (x ?
+        '<b>' + x + '</b><br />' + (y ? y + infoTitle : 'No data')
+        : 'Hover over a country/region');
+};
+
+info.addTo(map);
+
+// --------
+
 var legend = L.control({ position: 'bottomright' });
 
 legend.onAdd = function (map) {
@@ -71,15 +108,16 @@ legend.onAdd = function (map) {
     for (var i = 0; i < cs.length; i++) {
         div.innerHTML +=
             '<i style="background:' + cs[i] + '"></i> ' +
-            (i == 0 ? '>= ' + gs[i] : gs[i] + ' - ' + gs[i-1])
+            (i == 0 ? gs[i] + '+' : gs[i] + ' ~ ' + gs[i - 1])
             + '<br>';
     }
 
-    div.innerHTML += reportTitle
+    div.innerHTML += '<i style="background: #FFFFFF"></i> No data <br>';
+    div.innerHTML += legendTitle
 
     return div;
 };
 
 legend.addTo(map);
 
-L.geoJson(countriesData, { style: style, onEachFeature: onEachFeature }).addTo(map);
+geojson = L.geoJson(countriesData, { style: style, onEachFeature: onEachFeature }).addTo(map);
