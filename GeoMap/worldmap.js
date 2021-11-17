@@ -9,14 +9,13 @@ L.tileLayer(
 // colors ar efixed
 let cs = ['#b10026', '#e31a1c', '#fc4e2a', '#fd8d3c', '#feb24c', '#ffffcc']
 
-// we can ffi with this to color using covid info
+// get color
 function getColor(d) {
+    if (!datapack[d])
+        return '#FFFFFF'
     for (var i = 0; i < cs.length; i++) {
-        if (!datapack[d])
-            return '#FFFFFF'
-        if (datapack[d] < gs[i])
-            continue;
-        return cs[i];
+        if (datapack[d] >= gs[i])
+            return cs[i];
     }
 }
 
@@ -24,7 +23,7 @@ function style(feature) {
     return {
         // get population
         // in the project we will pass data from java using name
-        fillColor: getColor(feature.properties.name),
+        fillColor: getColor(feature.properties.iso_a3),
         weight: 2,
         opacity: 1,
         color: 'white',
@@ -71,7 +70,9 @@ legend.onAdd = function (map) {
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < cs.length; i++) {
         div.innerHTML +=
-            '<i style="background:' + cs[i] + '"></i> ' + gs[i] + '<br>';
+            '<i style="background:' + cs[i] + '"></i> ' +
+            (i == 0 ? '>= ' + gs[i] : gs[i] + ' - ' + gs[i-1])
+            + '<br>';
     }
 
     div.innerHTML += reportTitle
