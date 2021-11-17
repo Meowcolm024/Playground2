@@ -54,8 +54,8 @@ function highlightFeature(e) {
         layer.bringToFront();
     }
 
-    let name = layer.feature.properties.name
-    let code = layer.feature.properties.iso_a3
+    let name = layer.feature.properties.name        // region name
+    let code = layer.feature.properties.iso_a3      // region iso code
     info.update(name, datapack[code]);
 }
 
@@ -113,7 +113,6 @@ legend.onAdd = function (map) {
     }
 
     div.innerHTML += '<i style="background: #FFFFFF"></i> No data <br>';
-    div.innerHTML += legendTitle
 
     return div;
 };
