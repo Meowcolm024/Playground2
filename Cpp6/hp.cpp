@@ -1,19 +1,15 @@
-#include <iostream>
-#include <sstream>
-
-auto format(const char* f) -> decltype(auto) {
-    return std::string(f);
+int bye(int z) {
+    int p = 10*z;
+    int q = 5+z;
+    return p + q;
 }
 
-template<class T, class ... Ts>
-auto format(const char*f, T value, Ts ...rest) -> decltype(auto) {
-    auto acc = 0;
-    while (f[acc] != '\0' && f[acc] != '%')
-        acc++;
-    
-}
-
-int main() {
-    // std::cout << f(1,2,3,4,5) << std::endl;
-    return 0;
+int hello(int i, int j) {
+    int tmp = 0;
+    if (i > j) {
+        tmp = i * 10;
+    } else {
+        tmp = i / 10;
+    }
+    return tmp;
 }
