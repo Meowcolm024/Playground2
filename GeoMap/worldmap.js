@@ -8,18 +8,18 @@
 var map = L.map('map').setView([53, 13], 4);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox/light-v9',
-		tileSize: 512,
-		zoomOffset: -1
-	}).addTo(map);
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    id: 'mapbox/light-v9',
+    tileSize: 512,
+    zoomOffset: -1
+}).addTo(map);
 
 // colors are fixed
 let cs = ['#b10026', '#e31a1c', '#fc4e2a', '#fd8d3c', '#feb24c', '#ffffcc']
 
-// get color using iso code are related data
+// get color using iso code and related data
 function getColor(d) {
     if (!datapack[d])
         return '#FFFFFF'
@@ -89,9 +89,12 @@ info.onAdd = function (map) {
 
 // method that we will use to update the control based on feature properties passed
 info.update = function (x, y) {
-    this._div.innerHTML = '<h4>Covid Data</h4>' + (x ?
-        '<b>' + x + '</b><br />' + (y ? y + infoTitle : 'No data')
-        : 'Hover over a country/region');
+    this._div.innerHTML =
+        '<h4>Covid Data</h4>' +
+        'on ' + dateTitle + '<br>' +
+        (x ? '<b>' + x + '</b><br />' +
+            (y ? y + infoTitle : 'No data')
+            : 'Hover over a country/region');
 };
 
 info.addTo(map);
