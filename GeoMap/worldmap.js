@@ -23,7 +23,7 @@ let cs = ['#b10026', '#e31a1c', '#fc4e2a', '#fd8d3c', '#feb24c', '#ffffcc']
 function getColor(d) {
     if (!datapack[d])
         return '#FFFFFF'
-    for (var i = 0; i < cs.length; i++) {
+    for (var i = 0; i < gs.length; i++) {
         if (datapack[d] >= gs[i])
             return cs[i];
     }
@@ -108,7 +108,7 @@ legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend')
 
     // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < cs.length; i++) {
+    for (var i = 0; i < gs.length; i++) {
         div.innerHTML +=
             '<i style="background:' + cs[i] + '"></i> ' +
             (i == 0 ? gs[i] + '+' : gs[i] + ' ~ ' + gs[i - 1])

@@ -8,16 +8,16 @@ struct Pair
 };
 
 template <class A>
-Pair<A, A> f(A x, int acc)
+void f(A x, int acc)
 {
-    if (!acc)
-        return Pair<A, A>{x, x};
-    // ! template expansion diverges
-    return f<Pair<A, A>>(Pair<A, A>{x, x}, acc - 1);
+    if (acc == 0)
+        return;
+    std::cout << x << std::endl;
+    f(Pair<A, A>{x, x}, acc-1);
 }
 
 int main()
 {
-    auto r = f<int>(1, 10);
+    f<int>(1, 10);
     return 0;
 }

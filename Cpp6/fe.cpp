@@ -5,8 +5,6 @@
 #include <functional>
 #include <optional>
 
-#define DELAY(ty, expr) lazy<ty>([](){return expr;}) 
-
 using namespace std;
 
 struct sum
