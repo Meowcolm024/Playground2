@@ -13,7 +13,7 @@ void f(A x, int acc)
     if (acc == 0)
         return;
     std::cout << x << std::endl;
-    f(Pair<A, A>{x, x}, acc-1);
+    f(Pair<A, A>{x, x}, acc - 1);
 }
 
 int main()
