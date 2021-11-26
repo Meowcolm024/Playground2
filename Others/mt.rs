@@ -9,3 +9,8 @@ fn hello(i: i32) -> i32 {
 fn main() {
     let x = hello(3);
 }
+
+enum Tree {
+    Leaf(),
+    Node(i32 value, Box<Tree> left, Box<Tree> right),
+}
