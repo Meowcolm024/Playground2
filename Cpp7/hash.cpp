@@ -37,7 +37,7 @@ struct Cell
     optional<Key> key;
     shared_ptr<T> data;
     Flag flag;
-    Cell() : data(nullptr), flag(Flag::EMPTY) {}
+    Cell() : data(nullptr), flag(Flag::EMPTY), key(nullopt) {}
 };
 
 template <class Key, class T>
@@ -127,7 +127,7 @@ public:
 
     void rehashing()
     {
-        cout << "rehashing" << endl;
+        cout << "*** rehashing" << endl;
         vector<Cell<Key, T>> tmp = move(this->table);
         auto p = nextPrime(capacity * 2);
         capacity = p;
@@ -144,45 +144,31 @@ public:
 
     void print() const
     {
+        cout << "----------\n";
         for (const Cell<Key, T> &cell : table)
         {
-            cout << (int)cell.flag << " ";
-            if (cell.flag != Flag::EMPTY)
+            if (cell.flag == Flag::ACTIVE)
             {
-                cout << cell.key.value() << " " << *cell.data;
+                cout << cell.key.value() << " -> " << *cell.data << endl;
             }
-            cout << endl;
         }
+        cout << "----------\n";
     }
 };
 
-int hash_function(int key, int capacity)
-{
-    return key % capacity;
-}
-
-int offset_function(int key, int i)
-{
-    if (i == 0)
-        return 0;
-    return i * i * i;
-}
-
-auto ms(string s) -> decltype(auto)
-{
-    return make_shared<string>(s);
-}
-
 int main()
 {
-    auto table = Table<int, string>(3, hash_function, offset_function);
+    auto table = Table<int, string>(
+        3, [](int key, int capacity)
+        { return key % capacity; },
+        [](int key, int i)
+        { return i * i * i; });
+
     table.insert(1, "hello").insert(9, "bye").print();
-    cout << "----------\n";
     table.insert(6, "omg").insert(123, "hahah").insert(89, "qwq").print();
-    cout << "----------\n";
     table.insert(1, "bbbbb").remove(89).print();
-    cout << "----------\n";
     table.insert(89, "qwq").insert(56, "hahah").insert(123, "tmd").print();
+    table.remove(1).remove(9).print();
 
     return 0;
 }
