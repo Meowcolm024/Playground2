@@ -34,13 +34,6 @@ Fixpoint constr (p: parens) : list token :=
     | inner x y => [open] ++ constr x ++ [close] ++ constr y
     end.
 
-Lemma con_bal: forall x y: list token,
-    check_bal (x ++ y) = andb (check_bal x) (check_bal y).
-Proof.
-    intros x y.
-    induction x as [| n lx IHx].
-Abort. 
-
 Theorem l_is_balances : forall p : parens,
     check_bal ( constr p ) = true.
 Proof.
@@ -48,8 +41,5 @@ Proof.
     induction p as [| n m IH].
     + auto.
     + simpl.
-      unfold check_bal.
-      simpl.
-    
+
 Abort.
-(* Qed. *)
