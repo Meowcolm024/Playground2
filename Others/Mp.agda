@@ -1,7 +1,5 @@
 module Mp where
 
-open import Agda.Builtin.IO using (IO)
-open import Agda.Builtin.Unit using (⊤)
 open import Agda.Builtin.String using (String)
 open import Agda.Builtin.List 
 open import Agda.Builtin.Nat
@@ -16,6 +14,10 @@ data Map (A : Set) : List String -> Set where
 get : {A : Set} {xs : List String} {x : String} -> Map A (x ∷ xs) -> Key A x
 get (put k _) = k
 
+-- elem : String -> List String -> ( {A : Set} -> Set -> Set)
+-- elem s [] = {A : Set} -> Map A [] -> Key A s
+-- elem s (x ∷ xs) = {A : Set} -> Map A xs -> Key A s 
+
 m1 : Map Nat ("hello" ∷ [])
 m1 = put (key 3) empty
 
@@ -28,9 +30,5 @@ r1 = get m2
 r2 : Key Nat "hello"
 r2 = get m1
 
-postulate putStrLn : String → IO ⊤
-{-# FOREIGN GHC import qualified Data.Text as T #-}
-{-# COMPILE GHC putStrLn = putStrLn . T.unpack #-}
-
-main : IO ⊤
-main = putStrLn "Hello world!"
+k1 : Key Nat "bye"
+k1 = key 233
