@@ -7,14 +7,14 @@ module Pord where
 data Nat = Z | S Nat deriving (Show)
 
 data TNat :: Nat -> * where
-    TZ ::TNat Z
-    TS ::TNat n -> TNat (S n)
+    TZ :: TNat Z
+    TS :: TNat n -> TNat (S n)
 
 deriving instance Show (TNat n)
 
 data Vec :: Nat -> * -> * where
-    Nil ::Vec Z a
-    Cons ::a -> Vec n a -> Vec (S n) a
+    Nil :: Vec Z a
+    Cons :: a -> Vec n a -> Vec (S n) a
 
 deriving instance Show a => Show (Vec n a)
 
@@ -40,6 +40,16 @@ fromList (TS n) []       = undefined
 append :: Vec n a -> Vec m a -> Vec (Add n m) a
 append Nil         ys = ys
 append (Cons x xs) ys = Cons x (append xs ys)
+
+rev :: Vec n a -> Vec n a
+rev Nil       = Nil
+rev xs@Cons{} = Cons x (rev xs')
+  where
+    (x, xs') = initLast xs
+    initLast :: Vec (S n) a -> (a, Vec n a)
+    initLast (Cons x xs) = case xs of
+        Nil    -> (x, Nil)
+        Cons{} -> let (x', xs') = initLast xs in (x', Cons x xs')
 
 instance Functor (Vec n) where
     fmap _ Nil         = Nil
