@@ -1,4 +1,5 @@
 {-# LANGUAGE MonadComprehensions #-}
+{-# LANGUAGE ApplicativeDo #-}
 module Appp where
 import           Control.Applicative            ( Alternative((<|>), empty) )
 
@@ -49,6 +50,11 @@ spaces = many (oneOf " \n\t") *> pure ()
 digits :: Parser String
 digits = many1 $ oneOf ['0' .. '9']
 
+option :: a -> Parser a -> Parser a
+option a p = Parser $ \s -> case parse p s of
+    Nothing      -> Just (a, s)
+    Just (r, s') -> Just (r, s')
+
 expr :: Parser Int
 expr = flip ($) <$> factor <*> expr'
 
@@ -85,3 +91,31 @@ math s = fst <$> parse expr s
 -- >>> (1+2)*(4/2)+6/(3-1)
 -- Just 9
 -- 9.0
+
+-- >>> parse ab "aaabc"
+-- Just (("aaa","b"),"c")
+ab = (,) <$> many (char 'a') <*> many (char 'b')
+
+-- >>> parse float "3.14"
+-- >>> parse float "233"
+-- Just (3.14,"")
+-- Just (233.0,"")
+float :: Parser Float
+float = do
+    d <- digits
+    s <- option "0" (char '.' *> digits)
+    pure $ read $ d ++ "." ++ s
+
+identifier = many1 $ oneOf ['a'..'z']
+symbol s = spaces *> string s <* spaces
+
+-- >>> parse ifElse " if true then 233 else 666 "
+-- Just (("true","233","666")," ")
+ifElse = do
+    symbol "if"
+    i <- identifier
+    symbol "then"
+    t <- digits
+    symbol "else"
+    r <- digits
+    pure (i, t, r)
