@@ -6,9 +6,9 @@ Inductive Term :=
 | t
 | f
 | zero
-| succ    (t : Term)
-| pred    (t : Term)
-| iszero  (t : Term)
+| succ    (tm : Term)
+| pred    (tm : Term)
+| iszero  (tm : Term)
 | cond    (p : Term) (t1 : Term) (t2 : Term).
 
 Fixpoint isnv (tm: Term) : bool :=
@@ -42,9 +42,8 @@ Fixpoint size (tm : Term) : nat :=
     | cond p t1 t2  => 1 + (size p) + (size t1) + (size t2)
     end.
 
-(* too obvious *)
-Lemma le_S : forall (a b : nat), a < b -> S a < S b. Proof. intros. lia. Qed.
-Lemma le_O : forall (a : nat), 0 < S a. Proof. intros. lia. Qed.
+Lemma le_S : forall (a b : nat), a < b -> S a < S b. 
+Proof. intros. lia. Qed.
 
 Function eval (tm : Term) {measure size tm} : Term :=
     match reduce tm with
@@ -128,8 +127,6 @@ Proof.
         * simpl. lia.
         * simpl. lia.
 Defined.
-
-Compute (reduce (iszero zero)).
 
 Definition t1 := cond (cond (iszero zero) f t) (succ zero) (succ (succ zero)).
 Compute (eval t1).

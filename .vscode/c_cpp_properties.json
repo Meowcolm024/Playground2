@@ -1,14 +1,14 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "macOS",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
-            "intelliSenseMode": "linux-clang-x64",
+            "intelliSenseMode": "macos-clang-arm64",
             "cppStandard": "c++17"
         }
     ],
