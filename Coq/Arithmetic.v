@@ -9,7 +9,8 @@ Inductive Term :=
 | succ    (tm : Term)
 | pred    (tm : Term)
 | iszero  (tm : Term)
-| cond    (p : Term) (t1 : Term) (t2 : Term).
+| cond    (p  : Term) (t1 : Term) (t2 : Term)
+.
 
 Fixpoint isnv (tm: Term) : bool :=
     match tm with
@@ -22,7 +23,7 @@ Fixpoint reduce (tm : Term) : option Term :=
     match tm with
     | cond t t1 _       => Some t1
     | cond f _  t2      => Some t2
-    | cond k t1 t2      => option_map (fun z => cond z t1 t2) (reduce k)
+    | cond p t1 t2      => option_map (fun z => cond z t1 t2) (reduce p)
     | succ n            => option_map succ (reduce n)
     | pred zero         => Some zero
     | pred (succ n)     => if isnv n then Some n else None
@@ -39,7 +40,7 @@ Fixpoint size (tm : Term) : nat :=
     | succ n        => 1 + size n
     | iszero n      => 1 + size n
     | pred n        => 1 + size n
-    | cond p t1 t2  => 1 + (size p) + (size t1) + (size t2)
+    | cond p t1 t2  => 1 + size p + size t1 + size t2
     end.
 
 Lemma le_S : forall (a b : nat), a < b -> S a < S b. 
@@ -64,15 +65,15 @@ Proof.
           inversion H0. rewrite <- H2. simpl. 
           lia. inversion H0.
         * simpl in H0. inversion H0. simpl.
-          assert (S (size t0) < S(size(pred tm))).
+          assert (S (size t0) < S (size (pred tm))).
           apply le_S. apply IHtm. reflexivity.
           simpl in H. apply H.
         * simpl in H0. inversion H0. 
-          assert (S (size t0) < S(size(iszero tm))).
+          assert (S (size t0) < S (size (iszero tm))).
           apply le_S. apply IHtm. reflexivity.
           simpl in H. apply H.
         * simpl in H0. inversion H0.
-          assert (S (size t0) < S(size(cond tm1 tm2 tm3))).
+          assert (S (size t0) < S (size (cond tm1 tm2 tm3))).
           apply le_S. apply IHtm. reflexivity.
           simpl in H. apply H. 
       + destruct tm; inversion H0.
@@ -92,7 +93,7 @@ Proof.
           assert (S (size t0) < S (size (iszero tm))).
           apply le_S. apply IHtm. reflexivity. apply H.
         * simpl in H0. inversion H0.
-          assert (S (size t0) < S(size(cond tm1 tm2 tm3))).
+          assert (S (size t0) < S (size (cond tm1 tm2 tm3))).
           apply le_S. apply IHtm. reflexivity.
           simpl in H. apply H.
       + destruct tm; inversion H0.
