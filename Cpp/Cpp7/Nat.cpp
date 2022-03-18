@@ -26,4 +26,4 @@ struct Add<S<x>, y>
     using result = S<typename Add<x, y>::result>;
 };
 
-using t = Add<S<Z>, S<S<Z>>>::result;
+using three = Add<S<Z>, S<S<Z>>>::result;
