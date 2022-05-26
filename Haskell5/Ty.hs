@@ -1,4 +1,6 @@
 {-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
 module Haskell5.Ty where
 
 fix :: (t -> t) -> t
@@ -75,3 +77,15 @@ ppPair = PP (,) fst snd
 
 swapp :: PP p -> p a b -> p b a
 swapp (PP p f s) x = p (s x) (f x)
+
+class ListLike where
+    type T :: *
+    type List :: * -> *
+    hd :: List T -> T
+    tl :: List T -> List T
+
+instance ListLike where
+    type T = Int
+    type List = []
+    hd = head
+    tl = tail

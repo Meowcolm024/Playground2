@@ -3,3 +3,6 @@ bin/
 .fake
 .ionide
 *.agdai
+LaTeX/
+*.hi
+*.o

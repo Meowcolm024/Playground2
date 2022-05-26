@@ -1,3 +1,4 @@
+import java.lang.reflect.Field
 
 trait Functor[F[_]]:
     def fmap[A, B](v: F[A], f: A => B): F[B]
@@ -48,3 +49,25 @@ liftAdd1(1::2::Nil)
 dupMonoid(1::2::3::Nil)(ListMonoid)
 dupMonoid(6)
 
+trait FieldA[A]:
+    def _a: A
+
+trait FieldB[B]:
+    def _b: B
+
+case class Haha(_a: Int) extends FieldA[Int]
+case class Omg(_b: String) extends FieldB[String]
+case class Bang(_a: Int, _b: String) extends FieldA[Int] with FieldB[String]
+
+def useBoth[A, B](hi: FieldA[A], lo: FieldB[B]) =
+    s"_a : ${hi._a} ; _b :${lo._b}"
+
+useBoth(Haha(123), Omg("aaaaaa"))
+useBoth(Bang(666, "omg"), Omg("233"))
+
+implicit class FunAp[A, B](self: A => B):
+    def $(p: A): B = self(p)
+
+def add(x: Int)(y: Int): Int = x + y
+
+val res = add $ 2 + 3 * 6 $ 6
