@@ -71,3 +71,24 @@ implicit class FunAp[A, B](self: A => B):
 def add(x: Int)(y: Int): Int = x + y
 
 val res = add $ 2 + 3 * 6 $ 6
+
+class SetCounter:
+    var x: Int = 1
+    def get: Int = x
+    def set(i: Int): Unit = x = i
+    def inc: Unit = 
+        val i = get
+        set(i + 1)
+
+class InstrCounter extends SetCounter:
+    var y: Int = 0
+    override def set(i: Int): Unit =
+        y += 1
+        x = i
+    def access: Int = y
+
+val ic = InstrCounter()
+ic.set(5)
+ic.inc
+ic.get
+ic.access

@@ -5709,3 +5709,199 @@ Caused by: java.lang.IllegalArgumentException: 79 is not a valid line number, al
 2022.05.24 20:22:43 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
 2022.05.24 20:22:43 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 3.67s
 2022.05.24 20:23:24 INFO  shutting down Metals
+2022.05.27 10:02:44 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/lsp.trace.json or /Users/yatchunglaw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.05.27 10:02:44 INFO  logging to file /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/metals.log
+2022.05.27 10:02:44 INFO  Started: Metals version 0.11.5 in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2' for client Visual Studio Code 1.67.2.
+2022.05.27 10:02:45 INFO  time: initialize in 0.98s
+2022.05.27 10:02:45 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.05.27 10:02:45 WARN  Build server is not auto-connectable.
+2022.05.27 10:02:45 WARN  no build tool detected in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+5月 27, 2022 10:02:46 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 3
+2022.05.27 10:02:48 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+5月 27, 2022 10:02:49 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 6
+5月 27, 2022 10:02:49 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 15
+5月 27, 2022 10:02:49 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 22
+2022.05.27 10:02:50 INFO  time: code lens generation in 1.1s
+2022.05.27 10:02:50 INFO  time: code lens generation in 1.12s
+2022.05.27 10:02:50 INFO  time: code lens generation in 1.09s
+2022.05.27 10:02:50 INFO  time: code lens generation in 1.07s
+2022.05.27 10:02:50 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.05.27 10:02:50 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 3.63s
+2022.05.27 10:03:14 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.56s
+[31merror[39m: Others/fu.worksheet.sc:80:52: 
+missing argument for parameter x of constructor SetCounter in class SetCounter: (x: Int): App.this.SetCounter
+class InstrCounter(var x: Int, var y: Int) extends SetCounter:
+                                                   ^^^^^^^^^^
+2022.05.27 10:04:14 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+[31merror[39m: Others/fu.worksheet.sc:80:24: 
+error overriding variable x in class SetCounter of type Int;
+  variable x of type Int needs `override` modifier
+class InstrCounter(var x: Int, var y: Int) extends SetCounter(x):
+                       ^
+2022.05.27 10:04:24 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.37s
+[31merror[39m: Others/fu.worksheet.sc:80:51: 
+Not found: x
+class InstrCounter(var y: Int) extends SetCounter(x):
+                                                  ^
+2022.05.27 10:04:35 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.24s
+[31merror[39m: Others/fu.worksheet.sc:80:40: 
+missing argument for parameter x of constructor SetCounter in class SetCounter: (x: Int): App.this.SetCounter
+class InstrCounter(var y: Int) extends SetCounter:
+                                       ^^^^^^^^^^
+2022.05.27 10:04:40 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.24s
+[31merror[39m: Others/fu.worksheet.sc:80:24: 
+error overriding variable x in class SetCounter of type Int;
+  variable x of type Int needs `override` modifier
+class InstrCounter(var x: Int, var y: Int) extends SetCounter(x):
+                       ^
+2022.05.27 10:04:47 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+[31merror[39m: Others/fu.worksheet.sc:80:33: 
+error overriding variable x in class SetCounter of type Int;
+  variable x of type Int cannot override a mutable variable
+class InstrCounter(override var x: Int, var y: Int) extends SetCounter(x):
+                                ^
+2022.05.27 10:06:05 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.35s
+[31merror[39m: Others/fu.worksheet.sc:80:24: 
+error overriding variable x in class SetCounter of type Int;
+  variable x of type Int needs `override` modifier
+class InstrCounter(var x: Int, var y: Int) extends SetCounter(x):
+                       ^
+2022.05.27 10:06:25 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+[31merror[39m: Others/fu.worksheet.sc:84:9: 
+Not found: y
+        y += 1
+        ^
+2022.05.27 10:07:31 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.24s
+[31merror[39m: Others/fu.worksheet.sc:75:7: 
+class SetCounter needs to be abstract, since var x: Int in class SetCounter in class App is not defined 
+(Note that variables need to be initialized to be defined)
+class SetCounter:
+      ^
+[31merror[39m: Others/fu.worksheet.sc:81:7: 
+class InstrCounter needs to be abstract, since:
+it has 3 unimplemented members.
+/** As seen from class InstrCounter, the missing signatures are as follows.
+ *  For convenience, these are usable as stub implementations.
+ */
+  // Members declared in repl.MdocSession$.App.InstrCounter
+  var x: Int = ???
+  var y: Int = ???
+  
+  // Members declared in repl.MdocSession$.App.SetCounter
+  var x: Int = ???
+
+class InstrCounter extends SetCounter:
+      ^
+2022.05.27 10:07:36 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+[31merror[39m: Others/fu.worksheet.sc:75:7: 
+class SetCounter needs to be abstract, since var x: Int in class SetCounter in class App is not defined 
+(Note that variables need to be initialized to be defined)
+class SetCounter:
+      ^
+[31merror[39m: Others/fu.worksheet.sc:81:7: 
+class InstrCounter needs to be abstract, since:
+it has 3 unimplemented members.
+/** As seen from class InstrCounter, the missing signatures are as follows.
+ *  For convenience, these are usable as stub implementations.
+ */
+  // Members declared in repl.MdocSession$.App.InstrCounter
+  var x: Int = ???
+  var y: Int = ???
+  
+  // Members declared in repl.MdocSession$.App.SetCounter
+  var x: Int = ???
+
+class InstrCounter extends SetCounter:
+      ^
+2022.05.27 10:07:44 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.25s
+[31merror[39m: Others/fu.worksheet.sc:75:7: 
+class SetCounter needs to be abstract, since var x: Int in class SetCounter in class App is not defined 
+(Note that variables need to be initialized to be defined)
+class SetCounter:
+      ^
+[31merror[39m: Others/fu.worksheet.sc:81:7: 
+class InstrCounter needs to be abstract, since:
+it has 3 unimplemented members.
+/** As seen from class InstrCounter, the missing signatures are as follows.
+ *  For convenience, these are usable as stub implementations.
+ */
+  // Members declared in repl.MdocSession$.App.InstrCounter
+  var x: Int = ???
+  var y: Int = ???
+  
+  // Members declared in repl.MdocSession$.App.SetCounter
+  var x: Int = ???
+
+class InstrCounter extends SetCounter:
+      ^
+2022.05.27 10:07:46 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.28s
+[31merror[39m: Others/fu.worksheet.sc:76:18: 
+Not found: _x1
+    var x: Int = _x1
+                 ^^^
+[31merror[39m: Others/fu.worksheet.sc:81:28: 
+missing argument for parameter _x of constructor SetCounter in class SetCounter: (_x: Int): App.this.SetCounter
+class InstrCounter extends SetCounter:
+                           ^^^^^^^^^^
+2022.05.27 10:08:03 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.23s
+[31merror[39m: Others/fu.worksheet.sc:81:28: 
+missing argument for parameter _x of constructor SetCounter in class SetCounter: (_x: Int): App.this.SetCounter
+class InstrCounter extends SetCounter:
+                           ^^^^^^^^^^
+2022.05.27 10:08:04 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.21s
+[31merror[39m: Others/fu.worksheet.sc:81:46: 
+missing argument for parameter _x of constructor SetCounter in class SetCounter: (_x: Int): App.this.SetCounter
+class InstrCounter(_x: Int, _y: Int) extends SetCounter:
+                                             ^^^^^^^^^^
+2022.05.27 10:08:11 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.22s
+[31merror[39m: Others/fu.worksheet.sc:81:7: 
+class InstrCounter needs to be abstract, since:
+it has 2 unimplemented members.
+/** As seen from class InstrCounter, the missing signatures are as follows.
+ *  For convenience, these are usable as stub implementations.
+ */
+  var x: Int = ???
+  var y: Int = ???
+
+class InstrCounter(_x: Int, _y: Int) extends SetCounter(_x):
+      ^
+2022.05.27 10:08:14 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.28s
+[31merror[39m: Others/fu.worksheet.sc:82:9: 
+error overriding variable x in class SetCounter of type Int;
+  variable x of type Int needs `override` modifier
+    var x : Int = _x
+        ^
+2022.05.27 10:08:21 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.24s
+2022.05.27 10:08:24 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.32s
+2022.05.27 10:08:28 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.34s
+2022.05.27 10:08:38 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.33s
+2022.05.27 10:08:49 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.35s
+2022.05.27 10:08:54 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.36s
+2022.05.27 10:09:15 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.34s
+[31merror[39m: 
+fu.worksheet.sc:146 (mdoc generated code) 
+ value inc is not a member of object App.this.InstrCounter
+      ic.inc
+
+
+[31merror[39m: Others/fu.worksheet.sc:90:1: 
+value get is not a member of object App.this.InstrCounter
+ic.get
+^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:91:1: 
+value access is not a member of object App.this.InstrCounter
+ic.access
+^^^^^^^^^
+2022.05.27 10:09:39 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.22s
+2022.05.27 10:09:48 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.34s
+2022.05.27 10:10:21 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.36s
+2022.05.27 10:10:26 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.37s
+2022.05.27 10:10:34 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+2022.05.27 10:11:01 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.35s
+2022.05.27 10:11:33 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.32s
+2022.05.27 10:11:36 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+2022.05.27 10:12:14 INFO  shutting down Metals
