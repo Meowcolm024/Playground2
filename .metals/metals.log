@@ -5905,3 +5905,2417 @@ ic.access
 2022.05.27 10:11:33 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.32s
 2022.05.27 10:11:36 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
 2022.05.27 10:12:14 INFO  shutting down Metals
+2022.05.30 10:11:39 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/lsp.trace.json or /Users/yatchunglaw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.05.30 10:11:40 INFO  logging to file /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/metals.log
+2022.05.30 10:11:40 INFO  Started: Metals version 0.11.5 in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2' for client Visual Studio Code 1.67.2.
+2022.05.30 10:11:41 INFO  time: initialize in 1.01s
+2022.05.30 10:11:41 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.05.30 10:11:41 WARN  Build server is not auto-connectable.
+2022.05.30 10:11:41 WARN  no build tool detected in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.05.30 10:11:44 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+5月 30, 2022 10:11:44 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 2
+5月 30, 2022 10:11:44 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 8
+2022.05.30 10:11:45 INFO  shutting down Metals
+2022.05.30 10:11:45 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.05.30 10:11:45 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 3.69s
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@6af993ab[Shutting down, pool size = 3, active threads = 2, queued tasks = 0, completed tasks = 214]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+java.util.concurrent.RejectedExecutionException: Task Future(<not completed>) rejected from java.util.concurrent.ThreadPoolExecutor@6af993ab[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 215]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365)
+	at scala.concurrent.impl.ExecutionContextImpl.execute(ExecutionContextImpl.scala:21)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:429)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:338)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete0(Promise.scala:285)
+	at scala.concurrent.impl.Promise$Transformation.handleFailure(Promise.scala:444)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:506)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.05.30 10:11:46 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.05.30 10:17:42 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/lsp.trace.json or /Users/yatchunglaw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.05.30 10:17:43 INFO  logging to file /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/metals.log
+2022.05.30 10:17:43 INFO  Started: Metals version 0.11.5 in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2' for client Visual Studio Code 1.67.2.
+2022.05.30 10:17:44 INFO  time: initialize in 1.1s
+2022.05.30 10:17:44 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.05.30 10:17:44 WARN  Build server is not auto-connectable.
+2022.05.30 10:17:44 WARN  no build tool detected in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.05.30 10:17:46 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.05.30 10:17:48 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.05.30 10:17:48 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 3.63s
+2022.05.30 10:18:04 INFO  shutting down Metals
+2022.06.20 10:48:20 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/lsp.trace.json or /Users/yatchunglaw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.06.20 10:48:20 INFO  logging to file /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/metals.log
+2022.06.20 10:48:20 INFO  Started: Metals version 0.11.6 in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2' for client Visual Studio Code 1.68.1.
+2022.06.20 10:48:20 INFO  time: initialize in 0.27s
+2022.06.20 10:48:20 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.20 10:48:20 WARN  Build server is not auto-connectable.
+2022.06.20 10:48:20 WARN  no build tool detected in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.06.20 10:48:23 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.20 10:48:24 INFO  time: code lens generation in 2.59s
+2022.06.20 10:48:25 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.20 10:48:25 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 3.74s
+6月 20, 2022 10:48:34 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+嚴重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 98 is not a valid line number, allowed [0..97]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:76)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:75)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:64)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:63)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:63)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1649)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1648)
+	... 16 more
+
+6月 20, 2022 10:48:35 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+嚴重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 98 is not a valid line number, allowed [0..97]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:76)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:75)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:64)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:63)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:63)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1649)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1648)
+	... 16 more
+
+6月 20, 2022 10:48:39 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+嚴重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 98 is not a valid line number, allowed [0..97]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:76)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:75)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:64)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:63)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:63)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1649)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1648)
+	... 16 more
+
+6月 20, 2022 10:48:40 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+嚴重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 98 is not a valid line number, allowed [0..97]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:76)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:75)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:64)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:63)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:63)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1649)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1648)
+	... 16 more
+
+2022.06.20 10:48:45 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.65s
+[31merror[39m: Others/fu.worksheet.sc:96:51: 
+Missing type parameter for App.this.Functor
+def guard[F[_]](p: => Boolean)(implicit functorT: Functor): F[Unit] =
+                                                  ^^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:97:15: 
+Not found: F
+    if p then F
+              ^
+2022.06.20 10:51:20 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.37s
+[31merror[39m: Others/fu.worksheet.sc:96:51: 
+Missing type parameter for App.this.Functor
+def guard[F[_]](p: => Boolean)(implicit functorT: Functor): F[Unit] =
+                                                  ^^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:97:15: 
+Not found: F
+    if p then F
+              ^
+2022.06.20 10:51:20 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+[31merror[39m: Others/fu.worksheet.sc:96:51: 
+Missing type parameter for App.this.Functor
+def guard[F[_]](p: => Boolean)(implicit functorT: Functor): F[Unit] =
+                                                  ^^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:97:15: 
+Not found: F
+    if p then F
+              ^
+2022.06.20 10:51:21 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+[31merror[39m: Others/fu.worksheet.sc:96:51: 
+Missing type parameter for App.this.Functor
+def guard[F[_]](p: => Boolean)(implicit functorT: Functor): F[Unit] =
+                                                  ^^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:97:15: 
+Not found: F
+    if p then F
+              ^
+2022.06.20 10:51:21 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+[31merror[39m: Others/fu.worksheet.sc:96:30: 
+Not found: type Applica
+trait Alternative[F] extends Applica 
+                             ^^^^^^^
+2022.06.20 10:52:57 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+[31merror[39m: Others/fu.worksheet.sc:96:30: 
+Not found: type Applica
+trait Alternative[F] extends Applica 
+                             ^^^^^^^
+2022.06.20 10:52:57 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+[31merror[39m: Others/fu.worksheet.sc:96:30: 
+Not found: type Applica
+trait Alternative[F] extends Applica 
+                             ^^^^^^^
+2022.06.20 10:52:57 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.26s
+2022.06.20 10:53:36 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.44s
+[31merror[39m: Others/fu.worksheet.sc:98:18: 
+Not found: type A
+    def empty: F[A]
+                 ^
+2022.06.20 10:53:45 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.26s
+2022.06.20 10:54:09 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.42s
+[31merror[39m: Others/fu.worksheet.sc:100:41: 
+Not found: type Alterna
+implicit object ListAlternative extends Alterna
+                                        ^^^^^^^
+2022.06.20 10:54:51 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.27s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:55:19 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:55:23 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.33s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:55:25 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:55:37 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.26s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:55:45 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:56:29 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.28s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:57:10 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:57:29 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:57:36 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:57:39 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:57:53 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.27s
+[31merror[39m: Others/fu.worksheet.sc:100:17: 
+object creation impossible, since:
+it has 2 unimplemented members.
+/** As seen from module class ListAlternative$, the missing signatures are as follows.
+ *  For convenience, these are usable as stub implementations.
+ */
+  def ap[A, B](f: List[A => B], x: List[A]): List[B] = ???
+  def pure[A](x: A): List[A] = ???
+
+implicit object ListAlternative extends Alternative[List]:
+                ^
+2022.06.20 10:58:16 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.33s
+[31merror[39m: Others/fu.worksheet.sc:100:17: 
+object creation impossible, since:
+it has 2 unimplemented members.
+/** As seen from module class ListAlternative$, the missing signatures are as follows.
+ *  For convenience, these are usable as stub implementations.
+ */
+  def ap[A, B](f: List[A => B], x: List[A]): List[B] = ???
+  def pure[A](x: A): List[A] = ???
+
+implicit object ListAlternative extends Alternative[List]:
+                ^
+2022.06.20 10:58:24 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.34s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 10:58:38 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+2022.06.20 10:58:42 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.43s
+[31merror[39m: Others/fu.worksheet.sc:114:26: <- expected but outdent found
+        guard(i % 2 == 0)
+                         ^
+2022.06.20 10:58:56 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 99ms
+[31merror[39m: Others/fu.worksheet.sc:114:26: <- expected but ( found
+        guard(i % 2 == 0)(ListAlternative)
+                         ^
+2022.06.20 10:59:01 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 85ms
+2022.06.20 10:59:10 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.41s
+2022.06.20 10:59:12 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.4s
+2022.06.20 10:59:17 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.44s
+6月 20, 2022 10:59:24 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 1930
+2022.06.20 10:59:30 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.44s
+[31merror[39m: Others/fu.worksheet.sc:100:64: 
+Not found: type ListFunctor
+implicit object ListAlternative extends Alternative[List] with ListFunctor:
+                                                               ^^^^^^^^^^^
+2022.06.20 10:59:37 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+2022.06.20 10:59:43 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.41s
+[31merror[39m: Others/fu.worksheet.sc:106:63: 
+Found:    (List[Any], Any => Any) => List[Any]
+Required: List[B]
+    override def fmap[A, B](v: List[A], f: A => B): List[B] = ListFunctor.fmap
+                                                              ^^^^^^^^^^^^^^^^
+2022.06.20 10:59:48 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.33s
+2022.06.20 10:59:59 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.4s
+[31merror[39m: Others/fu.worksheet.sc:48:20: 
+ambiguous implicit arguments: both object ListFunctor in class App and object ListAlternative in class App match type App.this.Functor[List] of parameter functorT of method liftAdd1 in class App
+liftAdd1(1::2::Nil)
+                   ^
+2022.06.20 11:00:04 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.28s
+2022.06.20 11:00:05 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.46s
+[31merror[39m: Others/fu.worksheet.sc:105:64: 
+Not found: v
+    def ap[A, B](f: List[A => B], x: List[A]): List[B] = f.map(v.map)
+                                                               ^
+2022.06.20 11:00:33 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.26s
+6月 20, 2022 11:00:36 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 2163
+[31merror[39m: Others/fu.worksheet.sc:105:64: 
+Found:    List[B]
+Required: B
+    def ap[A, B](f: List[A => B], x: List[A]): List[B] = f.map(x.map)
+                                                               ^^^^^
+2022.06.20 11:00:36 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+2022.06.20 11:00:46 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.43s
+2022.06.20 11:00:48 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.39s
+2022.06.20 11:00:59 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.45s
+2022.06.20 11:02:17 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.41s
+2022.06.20 11:02:31 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.44s
+6月 20, 2022 11:02:47 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 2418
+[31merror[39m: Others/fu.worksheet.sc:38:21: 
+method apply in trait LinearSeqOps does not take type parameters
+    def mempty[A] = Nil[A]
+                    ^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:53:25: 
+Found:    App.this.ListMonoid.type
+Required: App.this.Monoid[List[Int]]
+dupMonoid(1::2::3::Nil)(ListMonoid)
+                        ^^^^^^^^^^
+2022.06.20 11:02:47 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+[31merror[39m: Others/fu.worksheet.sc:53:25: 
+Found:    App.this.ListMonoid.type
+Required: App.this.Monoid[List[Int]]
+dupMonoid(1::2::3::Nil)(ListMonoid)
+                        ^^^^^^^^^^
+2022.06.20 11:02:53 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.32s
+[31merror[39m: Others/fu.worksheet.sc:53:25: 
+Found:    App.this.ListMonoid.type
+Required: App.this.Monoid[List[Int]]
+dupMonoid(1::2::3::Nil)(ListMonoid)
+                        ^^^^^^^^^^
+2022.06.20 11:03:01 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+[31merror[39m: Others/fu.worksheet.sc:53:25: 
+Found:    App.this.ListMonoid.type
+Required: App.this.Monoid[List[Int]]
+dupMonoid(1::2::3::Nil)(ListMonoid)
+                        ^^^^^^^^^^
+2022.06.20 11:03:05 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+[31merror[39m: Others/fu.worksheet.sc:53:24: 
+no implicit argument of type App.this.Monoid[List[Int]] was found for parameter monoidM of method dupMonoid in class App
+dupMonoid(1::2::3::Nil)
+                       ^
+2022.06.20 11:03:10 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+[31merror[39m: Others/fu.worksheet.sc:53:24: 
+no implicit argument of type App.this.Monoid[List[Int]] was found for parameter monoidM of method dupMonoid in class App
+dupMonoid(1::2::3::Nil)
+                       ^
+2022.06.20 11:03:15 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.29s
+2022.06.20 11:03:39 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.43s
+[31merror[39m: Others/fu.worksheet.sc:32:1: 
+Implicit classes must accept exactly one primary constructor parameter
+implicit class ListFunctor extends Functor[List]:
+^
+[31merror[39m: Others/fu.worksheet.sc:55:21: 
+Found:    App.this.ListFunctor.type
+Required: App.this.Functor[List]
+liftAdd1(1::2::Nil)(ListFunctor)
+                    ^^^^^^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:113:63: 
+value fmap is not a member of object App.this.ListFunctor
+    override def fmap[A, B](v: List[A], f: A => B): List[B] = ListFunctor.fmap(v, f)
+                                                              ^^^^^^^^^^^^^^^^
+2022.06.20 11:05:20 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.35s
+[31merror[39m: Others/fu.worksheet.sc:32:1: 
+Implicit classes must accept exactly one primary constructor parameter
+implicit class ListFunctor() extends Functor[List]:
+^
+[31merror[39m: Others/fu.worksheet.sc:55:21: 
+Found:    App.this.ListFunctor.type
+Required: App.this.Functor[List]
+liftAdd1(1::2::Nil)(ListFunctor)
+                    ^^^^^^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:113:63: 
+value fmap is not a member of object App.this.ListFunctor
+    override def fmap[A, B](v: List[A], f: A => B): List[B] = ListFunctor.fmap(v, f)
+                                                              ^^^^^^^^^^^^^^^^
+2022.06.20 11:05:31 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.3s
+[31merror[39m: Others/fu.worksheet.sc:32:1: 
+Implicit classes must accept exactly one primary constructor parameter
+implicit class ListFunctor() extends Functor[List]:
+^
+[31merror[39m: Others/fu.worksheet.sc:55:21: 
+Found:    App.this.ListFunctor.type
+Required: App.this.Functor[List]
+liftAdd1(1::2::Nil)(ListFunctor)
+                    ^^^^^^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:113:63: 
+value fmap is not a member of object App.this.ListFunctor
+    override def fmap[A, B](v: List[A], f: A => B): List[B] = ListFunctor.fmap(v, f)
+                                                              ^^^^^^^^^^^^^^^^
+2022.06.20 11:05:48 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.31s
+2022.06.20 11:05:50 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.43s
+[31merror[39m: Others/fu.worksheet.sc:55:21: 
+Found:    App.this.ListFunctor.type
+Required: App.this.Functor[List]
+liftAdd1(1::2::Nil)(ListFunctor)
+                    ^^^^^^^^^^^
+[31merror[39m: Others/fu.worksheet.sc:113:63: 
+value fmap is not a member of object App.this.ListFunctor
+    override def fmap[A, B](v: List[A], f: A => B): List[B] = ListFunctor.fmap(v, f)
+                                                              ^^^^^^^^^^^^^^^^
+2022.06.20 11:06:03 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.32s
+[31merror[39m: Others/fu.worksheet.sc:113:63: 
+value fmap is not a member of object App.this.ListFunctor
+    override def fmap[A, B](v: List[A], f: A => B): List[B] = ListFunctor.fmap(v, f)
+                                                              ^^^^^^^^^^^^^^^^
+2022.06.20 11:06:08 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.33s
+2022.06.20 11:06:20 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.44s
+Exception in thread "pool-8-thread-1" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-8-thread-2" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-8-thread-3" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-8-thread-4" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[31merror[39m: Others/fu.worksheet.sc:26:17: 
+object creation impossible, since def bind[A, B](x: M[A], f: A => M[B]): M[B] in trait Monad in class App is not defined 
+implicit object OptionMonad extends Monad[Option]:
+                ^
+2022.06.20 11:08:57 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.4s
+[31merror[39m: Others/fu.worksheet.sc:26:17: 
+object creation impossible, since def bind[A, B](x: M[A], f: A => M[B]): M[B] in trait Monad in class App is not defined 
+implicit object OptionMonad extends Monad[Option]:
+                ^
+2022.06.20 11:08:57 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.36s
+Exception in thread "pool-8-thread-5" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[31merror[39m: Others/fu.worksheet.sc:13:13: identifier or `_' expected
+    def >>=[[A, B](x: M[A], f: A => M[B]): M[B]
+            ^
+2022.06.20 11:09:03 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 81ms
+[31merror[39m: Others/fu.worksheet.sc:16:9: 
+Not found: bind
+        bind(x, (v => bind(f, (g => pure(g(v))))))
+        ^^^^
+[31merror[39m: Others/fu.worksheet.sc:16:18: 
+Missing parameter type
+
+I could not infer the type of the parameter v.
+        bind(x, (v => bind(f, (g => pure(g(v))))))
+                 ^
+[31merror[39m: Others/fu.worksheet.sc:16:23: 
+Not found: bind
+        bind(x, (v => bind(f, (g => pure(g(v))))))
+                      ^^^^
+[31merror[39m: Others/fu.worksheet.sc:16:32: 
+Missing parameter type
+
+I could not infer the type of the parameter g.
+        bind(x, (v => bind(f, (g => pure(g(v))))))
+                               ^
+2022.06.20 11:09:04 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.33s
+2022.06.20 11:09:14 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.4s
+Exception in thread "pool-8-thread-6" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.completions.CompletionsProvider.completions(CompletionsProvider.scala:56)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:103)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$1(CompilerAccess.scala:87)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.06.20 11:09:30 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.39s
+Exception in thread "pool-8-thread-7" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.completions.CompletionsProvider.completions(CompletionsProvider.scala:56)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:103)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$1(CompilerAccess.scala:87)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-8-thread-8" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.06.20 11:09:56 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/tc.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.20 11:09:56 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 1.06s
+2022.06.20 11:09:56 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 80ms
+Exception in thread "pool-8-thread-9" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.06.20 11:09:58 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.43s
+2022.06.20 11:11:13 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 83ms
+2022.06.20 11:11:15 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 75ms
+6月 20, 2022 11:11:36 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+警告: Unmatched cancel notification for request id 3271
+2022.06.20 11:11:57 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 90ms
+2022.06.20 11:12:40 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 88ms
+2022.06.20 11:13:16 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 95ms
+2022.06.20 11:13:28 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 90ms
+Exception in thread "pool-9-thread-1" dotty.tools.dotc.core.TypeError: bad parameter reference A at typer
+the parameter is type A in class Monad but the prefix <noprefix>
+does not define any corresponding arguments.
+idx = 1, args = List()
+	at dotty.tools.dotc.core.Types$NamedType.argDenot(Types.scala:2326)
+	at dotty.tools.dotc.core.Types$NamedType.fromDesignator$1(Types.scala:2240)
+	at dotty.tools.dotc.core.Types$NamedType.computeDenot(Types.scala:2258)
+	at dotty.tools.dotc.core.Types$NamedType.denot(Types.scala:2213)
+	at dotty.tools.dotc.core.Types$NamedType.info(Types.scala:2201)
+	at dotty.tools.dotc.core.Types$Type.dealias1(Types.scala:1369)
+	at dotty.tools.dotc.core.Types$Type.dealias(Types.scala:1393)
+	at dotty.tools.dotc.core.Definitions.isTupleNType(Definitions.scala:1483)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:150)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at scala.meta.internal.pc.printer.DotcPrinter$Std.tpe(DotcPrinter.scala:40)
+	at scala.meta.internal.pc.printer.MetalsPrinter.tpe(MetalsPrinter.scala:72)
+	at scala.meta.internal.pc.printer.MetalsPrinter.paramLabel(MetalsPrinter.scala:315)
+	at scala.meta.internal.pc.printer.MetalsPrinter.$anonfun$3(MetalsPrinter.scala:181)
+	at scala.collection.immutable.List.flatMap(List.scala:293)
+	at scala.meta.internal.pc.printer.MetalsPrinter.label$1$$anonfun$1(MetalsPrinter.scala:184)
+	at scala.collection.immutable.List.flatMap(List.scala:293)
+	at scala.meta.internal.pc.printer.MetalsPrinter.label$1(MetalsPrinter.scala:189)
+	at scala.meta.internal.pc.printer.MetalsPrinter.defaultMethodSignature(MetalsPrinter.scala:192)
+	at scala.meta.internal.pc.printer.MetalsPrinter.hoverSymbol(MetalsPrinter.scala:98)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:98)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.hover$$anonfun$1(ScalaPresentationCompiler.scala:214)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-9-thread-2" dotty.tools.dotc.core.TypeError: bad parameter reference A at typer
+the parameter is type A in class Monad but the prefix <noprefix>
+does not define any corresponding arguments.
+idx = 1, args = List()
+	at dotty.tools.dotc.core.Types$NamedType.argDenot(Types.scala:2326)
+	at dotty.tools.dotc.core.Types$NamedType.fromDesignator$1(Types.scala:2240)
+	at dotty.tools.dotc.core.Types$NamedType.computeDenot(Types.scala:2258)
+	at dotty.tools.dotc.core.Types$NamedType.denot(Types.scala:2213)
+	at dotty.tools.dotc.core.Types$NamedType.info(Types.scala:2201)
+	at dotty.tools.dotc.core.Types$Type.dealias1(Types.scala:1369)
+	at dotty.tools.dotc.core.Types$Type.dealias(Types.scala:1393)
+	at dotty.tools.dotc.core.Definitions.isTupleNType(Definitions.scala:1483)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:150)
+	at dotty.tools.dotc.printing.Printer.changePrec$$anonfun$1(Printer.scala:72)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at dotty.tools.dotc.printing.PlainPrinter.argText(PlainPrinter.scala:116)
+	at dotty.tools.dotc.printing.RefinedPrinter.$anonfun$1(RefinedPrinter.scala:153)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:153)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at scala.meta.internal.pc.printer.DotcPrinter$Std.tpe(DotcPrinter.scala:40)
+	at scala.meta.internal.pc.printer.MetalsPrinter.tpe(MetalsPrinter.scala:72)
+	at scala.meta.internal.pc.printer.MetalsPrinter.defaultMethodSignature(MetalsPrinter.scala:195)
+	at scala.meta.internal.pc.printer.MetalsPrinter.hoverSymbol(MetalsPrinter.scala:98)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:98)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.hover$$anonfun$1(ScalaPresentationCompiler.scala:214)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-9-thread-3" dotty.tools.dotc.core.TypeError: bad parameter reference A at typer
+the parameter is type A in class Monad but the prefix <noprefix>
+does not define any corresponding arguments.
+idx = 1, args = List()
+	at dotty.tools.dotc.core.Types$NamedType.argDenot(Types.scala:2326)
+	at dotty.tools.dotc.core.Types$NamedType.fromDesignator$1(Types.scala:2240)
+	at dotty.tools.dotc.core.Types$NamedType.computeDenot(Types.scala:2258)
+	at dotty.tools.dotc.core.Types$NamedType.denot(Types.scala:2213)
+	at dotty.tools.dotc.core.Types$NamedType.info(Types.scala:2201)
+	at dotty.tools.dotc.core.Types$Type.dealias1(Types.scala:1369)
+	at dotty.tools.dotc.core.Types$Type.dealias(Types.scala:1393)
+	at dotty.tools.dotc.core.Definitions.isTupleNType(Definitions.scala:1483)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:150)
+	at dotty.tools.dotc.printing.Printer.changePrec$$anonfun$1(Printer.scala:72)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at dotty.tools.dotc.printing.PlainPrinter.argText(PlainPrinter.scala:116)
+	at dotty.tools.dotc.printing.RefinedPrinter.$anonfun$1(RefinedPrinter.scala:153)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:153)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at scala.meta.internal.pc.printer.DotcPrinter$Std.tpe(DotcPrinter.scala:40)
+	at scala.meta.internal.pc.printer.MetalsPrinter.tpe(MetalsPrinter.scala:72)
+	at scala.meta.internal.pc.printer.MetalsPrinter.defaultMethodSignature(MetalsPrinter.scala:195)
+	at scala.meta.internal.pc.printer.MetalsPrinter.hoverSymbol(MetalsPrinter.scala:98)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:98)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.hover$$anonfun$1(ScalaPresentationCompiler.scala:214)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-9-thread-4" dotty.tools.dotc.core.TypeError: bad parameter reference A at typer
+the parameter is type A in class Monad but the prefix <noprefix>
+does not define any corresponding arguments.
+idx = 1, args = List()
+	at dotty.tools.dotc.core.Types$NamedType.argDenot(Types.scala:2326)
+	at dotty.tools.dotc.core.Types$NamedType.fromDesignator$1(Types.scala:2240)
+	at dotty.tools.dotc.core.Types$NamedType.computeDenot(Types.scala:2258)
+	at dotty.tools.dotc.core.Types$NamedType.denot(Types.scala:2213)
+	at dotty.tools.dotc.core.Types$NamedType.info(Types.scala:2201)
+	at dotty.tools.dotc.core.Types$Type.dealias1(Types.scala:1369)
+	at dotty.tools.dotc.core.Types$Type.dealias(Types.scala:1393)
+	at dotty.tools.dotc.core.Definitions.isTupleNType(Definitions.scala:1483)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:150)
+	at dotty.tools.dotc.printing.Printer.changePrec$$anonfun$1(Printer.scala:72)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at dotty.tools.dotc.printing.PlainPrinter.argText(PlainPrinter.scala:116)
+	at dotty.tools.dotc.printing.RefinedPrinter.$anonfun$1(RefinedPrinter.scala:153)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:153)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at scala.meta.internal.pc.printer.DotcPrinter$Std.tpe(DotcPrinter.scala:40)
+	at scala.meta.internal.pc.printer.MetalsPrinter.tpe(MetalsPrinter.scala:72)
+	at scala.meta.internal.pc.printer.MetalsPrinter.defaultMethodSignature(MetalsPrinter.scala:195)
+	at scala.meta.internal.pc.printer.MetalsPrinter.hoverSymbol(MetalsPrinter.scala:98)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:98)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.hover$$anonfun$1(ScalaPresentationCompiler.scala:214)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-9-thread-5" dotty.tools.dotc.core.TypeError: bad parameter reference A at typer
+the parameter is type A in class Monad but the prefix <noprefix>
+does not define any corresponding arguments.
+idx = 1, args = List()
+	at dotty.tools.dotc.core.Types$NamedType.argDenot(Types.scala:2326)
+	at dotty.tools.dotc.core.Types$NamedType.fromDesignator$1(Types.scala:2240)
+	at dotty.tools.dotc.core.Types$NamedType.computeDenot(Types.scala:2258)
+	at dotty.tools.dotc.core.Types$NamedType.denot(Types.scala:2213)
+	at dotty.tools.dotc.core.Types$NamedType.info(Types.scala:2201)
+	at dotty.tools.dotc.core.Types$Type.dealias1(Types.scala:1369)
+	at dotty.tools.dotc.core.Types$Type.dealias(Types.scala:1393)
+	at dotty.tools.dotc.core.Definitions.isTupleNType(Definitions.scala:1483)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:150)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at scala.meta.internal.pc.printer.DotcPrinter$Std.tpe(DotcPrinter.scala:40)
+	at scala.meta.internal.pc.printer.MetalsPrinter.tpe(MetalsPrinter.scala:72)
+	at scala.meta.internal.pc.printer.MetalsPrinter.paramLabel(MetalsPrinter.scala:315)
+	at scala.meta.internal.pc.printer.MetalsPrinter.$anonfun$3(MetalsPrinter.scala:181)
+	at scala.collection.immutable.List.flatMap(List.scala:293)
+	at scala.meta.internal.pc.printer.MetalsPrinter.label$1$$anonfun$1(MetalsPrinter.scala:184)
+	at scala.collection.immutable.List.flatMap(List.scala:293)
+	at scala.meta.internal.pc.printer.MetalsPrinter.label$1(MetalsPrinter.scala:189)
+	at scala.meta.internal.pc.printer.MetalsPrinter.defaultMethodSignature(MetalsPrinter.scala:192)
+	at scala.meta.internal.pc.printer.MetalsPrinter.hoverSymbol(MetalsPrinter.scala:98)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:98)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.hover$$anonfun$1(ScalaPresentationCompiler.scala:214)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.06.20 11:13:36 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 93ms
+[31merror[39m: 
+tc.worksheet.sc:23 (mdoc generated code) 
+ indented definitions expected, eof found
+    $doc.endStatement();
+
+
+[31merror[39m: Others/tc.worksheet.sc:12:50: 
+Missing type parameter for App.this.Functor
+implicit class ListApp[A](self: List[A]) extends Functor:
+                                                 ^^^^^^^
+2022.06.20 11:14:09 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 53ms
+[31merror[39m: Others/tc.worksheet.sc:13:1: expected template body
+
+^
+2022.06.20 11:14:12 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+Exception in thread "pool-9-thread-6" dotty.tools.dotc.core.TypeError: bad parameter reference A at typer
+the parameter is type A in class ListFunctor but the prefix <noprefix>
+does not define any corresponding arguments.
+idx = 0, args = List()
+	at dotty.tools.dotc.core.Types$NamedType.argDenot(Types.scala:2326)
+	at dotty.tools.dotc.core.Types$NamedType.fromDesignator$1(Types.scala:2240)
+	at dotty.tools.dotc.core.Types$NamedType.computeDenot(Types.scala:2258)
+	at dotty.tools.dotc.core.Types$NamedType.denot(Types.scala:2213)
+	at dotty.tools.dotc.core.Types$NamedType.info(Types.scala:2201)
+	at dotty.tools.dotc.core.Types$Type.dealias1(Types.scala:1369)
+	at dotty.tools.dotc.core.Types$Type.dealias(Types.scala:1393)
+	at dotty.tools.dotc.core.Definitions.isTupleNType(Definitions.scala:1483)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:150)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at scala.meta.internal.pc.printer.DotcPrinter$Std.tpe(DotcPrinter.scala:40)
+	at scala.meta.internal.pc.printer.MetalsPrinter.tpe(MetalsPrinter.scala:72)
+	at scala.meta.internal.pc.printer.MetalsPrinter.completionSymbol(MetalsPrinter.scala:120)
+	at scala.meta.internal.pc.completions.CompletionValue.description(CompletionValue.scala:52)
+	at scala.meta.internal.pc.completions.CompletionValue.description$(CompletionValue.scala:19)
+	at scala.meta.internal.pc.completions.CompletionValue$Compiler.description(CompletionValue.scala:69)
+	at scala.meta.internal.pc.completions.CompletionsProvider.completionItems(CompletionsProvider.scala:154)
+	at scala.meta.internal.pc.completions.CompletionsProvider.$anonfun$1(CompletionsProvider.scala:86)
+	at scala.collection.immutable.List.map(List.scala:246)
+	at scala.meta.internal.pc.completions.CompletionsProvider.completions(CompletionsProvider.scala:87)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:103)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$1(CompilerAccess.scala:87)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.06.20 11:14:26 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 94ms
+[31merror[39m: Others/tc.worksheet.sc:15:16: 
+class ListApplicative needs to be abstract, since:
+it has 3 unimplemented members.
+/** As seen from class ListApplicative, the missing signatures are as follows.
+ *  For convenience, these are usable as stub implementations.
+ */
+  // Members declared in repl.MdocSession$.App.Applicative
+  def <&>[B](f: List[A => B]): List[B] = ???
+  def pure: List[A] = ???
+  
+  // Members declared in repl.MdocSession$.App.Functor
+  def map[B](f: A => B): List[B] = ???
+
+implicit class ListApplicative[A](self: List[A]) extends Applicative(self)
+               ^
+2022.06.20 11:15:06 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 75ms
+[31merror[39m: Others/tc.worksheet.sc:15:75: ; expected but : found
+implicit class ListApplicative[A](self: List[A]) extends Applicative(self):
+                                                                          ^
+2022.06.20 11:15:08 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 72ms
+[31merror[39m: Others/tc.worksheet.sc:15:81: identifier expected but end of file found
+implicit class ListApplicative[A](self: List[A]) extends Applicative(self) with 
+                                                                                ^
+2022.06.20 11:15:13 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 86ms
+[31merror[39m: Others/tc.worksheet.sc:15:81: identifier expected but end of file found
+implicit class ListApplicative[A](self: List[A]) extends Applicative(self) with 
+                                                                                ^
+2022.06.20 11:15:13 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 66ms
+[31merror[39m: Others/tc.worksheet.sc:15:81: identifier expected but end of file found
+implicit class ListApplicative[A](self: List[A]) extends Applicative(self) with 
+                                                                                ^
+2022.06.20 11:15:13 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 96ms
+[31merror[39m: 
+tc.worksheet.sc:27 (mdoc generated code) 
+ indented definitions expected, eof found
+    $doc.endStatement();
+
+
+[31merror[39m: Others/tc.worksheet.sc:15:81: 
+class ListFunctor is not a trait
+implicit class ListApplicative[A](self: List[A]) extends Applicative(self) with ListFunctor(self):
+                                                                                ^^^^^^^^^^^^^^^^^
+2022.06.20 11:15:19 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 58ms
+2022.06.20 11:15:45 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+[31merror[39m: Others/tc.worksheet.sc:2:5: identifier expected but def found
+    def map[B](f: A => B): F[B]
+    ^^^
+2022.06.20 11:15:51 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+2022.06.20 11:15:53 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 87ms
+[31merror[39m: Others/tc.worksheet.sc:4:48: 
+trait Applicative may not call constructor of trait Functor
+trait Applicative[F[_], A](self: F[A]) extends Functor(self):
+                                               ^^^^^^^^^^^^^
+2022.06.20 11:16:02 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 55ms
+[31merror[39m: Others/tc.worksheet.sc:4:48: 
+Missing type parameter for App.this.Functor
+trait Applicative[F[_], A](self: F[A]) extends Functor:
+                                               ^^^^^^^
+2022.06.20 11:16:12 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 56ms
+[31merror[39m: Others/tc.worksheet.sc:8:16: 
+parameterized trait Functor is indirectly implemented,
+needs to be implemented directly so that arguments can be passed
+abstract class Monad[F[_], A](self: F[A]) extends Applicative(self):
+               ^
+2022.06.20 11:16:19 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 74ms
+Exception in thread "pool-9-thread-7" dotty.tools.dotc.core.TypeError: bad parameter reference A at typer
+the parameter is type A in class Monad but the prefix <noprefix>
+does not define any corresponding arguments.
+idx = 1, args = List()
+	at dotty.tools.dotc.core.Types$NamedType.argDenot(Types.scala:2326)
+	at dotty.tools.dotc.core.Types$NamedType.fromDesignator$1(Types.scala:2240)
+	at dotty.tools.dotc.core.Types$NamedType.computeDenot(Types.scala:2258)
+	at dotty.tools.dotc.core.Types$NamedType.denot(Types.scala:2213)
+	at dotty.tools.dotc.core.Types$NamedType.info(Types.scala:2201)
+	at dotty.tools.dotc.core.Types$Type.dealias1(Types.scala:1369)
+	at dotty.tools.dotc.core.Types$Type.dealias(Types.scala:1393)
+	at dotty.tools.dotc.core.Definitions.isTupleNType(Definitions.scala:1483)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:150)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at scala.meta.internal.pc.printer.DotcPrinter$Std.tpe(DotcPrinter.scala:40)
+	at scala.meta.internal.pc.printer.MetalsPrinter.tpe(MetalsPrinter.scala:72)
+	at scala.meta.internal.pc.printer.MetalsPrinter.shortTypeString$1(MetalsPrinter.scala:77)
+	at scala.meta.internal.pc.printer.MetalsPrinter.hoverSymbol(MetalsPrinter.scala:105)
+	at scala.meta.internal.pc.HoverProvider$.hover(HoverProvider.scala:98)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.hover$$anonfun$1(ScalaPresentationCompiler.scala:214)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[31merror[39m: Others/tc.worksheet.sc:8:42: 
+trait Monad may not call constructor of trait Applicative
+trait Monad[F[_], A](self: F[A]) extends Applicative(self):
+                                         ^^^^^^^^^^^^^^^^^
+2022.06.20 11:16:23 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 62ms
+2022.06.20 11:16:27 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 80ms
+[31merror[39m: Others/tc.worksheet.sc:16:9: 
+error overriding method map in class ListFunctor of type [B](f: A => B): List[B];
+  method map of type [B](f: A => B): List[B] needs `override` modifier
+    def map[B](f: A => B): List[B] = self.map(f)
+        ^
+2022.06.20 11:16:44 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 77ms
+2022.06.20 11:16:46 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 82ms
+[31merror[39m: Others/tc.worksheet.sc:15:16: 
+class ListApplicative needs to be abstract, since:
+it has 2 unimplemented members.
+/** As seen from class ListApplicative, the missing signatures are as follows.
+ *  For convenience, these are usable as stub implementations.
+ */
+  def <&>[B](f: List[A => B]): List[B] = ???
+  def pure: List[A] = ???
+
+implicit class ListApplicative[A](self: List[A]) extends ListFunctor(self) with Applicative(self)
+               ^
+2022.06.20 11:16:57 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 63ms
+[31merror[39m: 
+tc.worksheet.sc:27 (mdoc generated code) 
+ indented definitions expected, eof found
+    $doc.endStatement();
+
+
+2022.06.20 11:17:02 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 52ms
+2022.06.20 11:17:36 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.12s
+2022.06.20 11:19:10 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 99ms
+[31merror[39m: Others/tc.worksheet.sc:17:16: 
+class ListApplicative needs to be abstract, since def pure[A]: F[A] in trait Pure in class App is not defined 
+implicit class ListApplicative[A](self: List[A]) extends ListFunctor(self) with Applicative(self):
+               ^
+2022.06.20 11:19:18 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 55ms
+[31merror[39m: Others/tc.worksheet.sc:17:16: 
+class ListApplicative needs to be abstract, since def pure[A]: F[A] in trait Pure in class App is not defined 
+implicit class ListApplicative[A](self: List[A]) extends ListFunctor(self) with Applicative(self):
+               ^
+2022.06.20 11:19:31 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 60ms
+[31merror[39m: Others/tc.worksheet.sc:17:16: 
+class ListApplicative needs to be abstract, since def pure[A]: F[A] in trait Pure in class App is not defined 
+implicit class ListApplicative[A](self: List[A]) extends ListFunctor(self) with Applicative(self):
+               ^
+2022.06.20 11:19:31 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 48ms
+[31merror[39m: Others/tc.worksheet.sc:20:16: 
+class ListApplicative needs to be abstract, since def pure[A](v: A): F[A] in trait Pure in class App is not defined 
+implicit class ListApplicative[A](self: List[A]) extends ListFunctor(self) with Applicative(self):
+               ^
+2022.06.20 11:20:07 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 55ms
+[31merror[39m: Others/tc.worksheet.sc:20:16: 
+class ListApplicative needs to be abstract, since def pure[A](v: A): F[A] in trait Pure in class App is not defined 
+implicit class ListApplicative[A](self: List[A]) extends ListFunctor(self) with Applicative(self):
+               ^
+2022.06.20 11:20:14 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 72ms
+[31merror[39m: Others/tc.worksheet.sc:20:16: 
+class ListApplicative needs to be abstract, since def pure[A](v: A): F[A] in trait Pure in class App is not defined 
+implicit class ListApplicative[A](self: List[A]) extends ListFunctor(self) with Applicative(self):
+               ^
+2022.06.20 11:20:21 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 57ms
+2022.06.20 11:20:25 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+2022.06.20 11:20:28 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+Exception in thread "pool-9-thread-8" dotty.tools.dotc.core.TypeError: bad parameter reference A at typer
+the parameter is type A in class ListMonad but the prefix <noprefix>
+does not define any corresponding arguments.
+idx = 0, args = List()
+	at dotty.tools.dotc.core.Types$NamedType.argDenot(Types.scala:2326)
+	at dotty.tools.dotc.core.Types$NamedType.fromDesignator$1(Types.scala:2240)
+	at dotty.tools.dotc.core.Types$NamedType.computeDenot(Types.scala:2258)
+	at dotty.tools.dotc.core.Types$NamedType.denot(Types.scala:2213)
+	at dotty.tools.dotc.core.Types$NamedType.info(Types.scala:2201)
+	at dotty.tools.dotc.core.Types$Type.dealias1(Types.scala:1369)
+	at dotty.tools.dotc.core.Types$Type.dealias(Types.scala:1393)
+	at dotty.tools.dotc.core.Definitions.isTupleNType(Definitions.scala:1483)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1$$anonfun$1(RefinedPrinter.scala:150)
+	at dotty.tools.dotc.printing.Printer.atPrec(Printer.scala:43)
+	at dotty.tools.dotc.printing.Printer.changePrec(Printer.scala:72)
+	at dotty.tools.dotc.printing.RefinedPrinter.toTextFunction$1(RefinedPrinter.scala:160)
+	at dotty.tools.dotc.printing.RefinedPrinter.appliedText$1(RefinedPrinter.scala:222)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText$$anonfun$1(RefinedPrinter.scala:234)
+	at dotty.tools.dotc.printing.MessageLimiter.controlled(MessageLimiter.scala:23)
+	at dotty.tools.dotc.printing.PlainPrinter.controlled(PlainPrinter.scala:36)
+	at dotty.tools.dotc.printing.RefinedPrinter.toText(RefinedPrinter.scala:300)
+	at scala.meta.internal.pc.printer.DotcPrinter$Std.tpe(DotcPrinter.scala:40)
+	at scala.meta.internal.pc.printer.MetalsPrinter.tpe(MetalsPrinter.scala:72)
+	at scala.meta.internal.pc.printer.MetalsPrinter.completionSymbol(MetalsPrinter.scala:120)
+	at scala.meta.internal.pc.completions.CompletionValue.description(CompletionValue.scala:52)
+	at scala.meta.internal.pc.completions.CompletionValue.description$(CompletionValue.scala:19)
+	at scala.meta.internal.pc.completions.CompletionValue$Compiler.description(CompletionValue.scala:69)
+	at scala.meta.internal.pc.completions.CompletionsProvider.completionItems(CompletionsProvider.scala:154)
+	at scala.meta.internal.pc.completions.CompletionsProvider.$anonfun$1(CompletionsProvider.scala:86)
+	at scala.collection.immutable.List.map(List.scala:246)
+	at scala.meta.internal.pc.completions.CompletionsProvider.completions(CompletionsProvider.scala:87)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.complete$$anonfun$1(ScalaPresentationCompiler.scala:103)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$1(CompilerAccess.scala:87)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.06.20 11:21:11 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 96ms
+2022.06.20 11:21:13 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 96ms
+2022.06.20 11:21:14 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.12s
+2022.06.20 11:21:21 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.13s
+2022.06.20 11:22:01 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+[31merror[39m: Others/tc.worksheet.sc:28:84: identifier expected but end of file found
+implicit class ListAlternative[A](self: List[A]) extends ListApplicative(self) with
+                                                                                   ^
+2022.06.20 11:22:27 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 79ms
+[31merror[39m: Others/tc.worksheet.sc:28:16: 
+class ListAlternative needs to be abstract, since def empty: F[A] in trait Alternative in class App is not defined 
+implicit class ListAlternative[A](self: List[A]) extends ListApplicative(self) with Alternative(self):
+               ^
+2022.06.20 11:22:39 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 68ms
+6月 20, 2022 11:22:44 上午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+嚴重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor6.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 30 is not a valid line number, allowed [0..29]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:76)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:75)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:64)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:63)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:63)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1649)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1648)
+	... 15 more
+
+2022.06.20 11:22:50 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 95ms
+2022.06.20 11:22:52 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+Exception in thread "pool-8-thread-10" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-8-thread-11" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Exception in thread "pool-8-thread-12" dotty.tools.dotc.core.TypeError: Toplevel definition ListFunctor is defined in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+and also in
+  /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc
+One of these files should be removed from the classpath.
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.dropStale$1(SymDenotations.scala:2431)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.recur$5(SymDenotations.scala:2395)
+	at dotty.tools.dotc.core.SymDenotations$PackageClassDenotation.computeMembersNamed(SymDenotations.scala:2451)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.membersNamed(SymDenotations.scala:2010)
+	at dotty.tools.dotc.core.SymDenotations$ClassDenotation.findMember(SymDenotations.scala:2061)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:686)
+	at dotty.tools.dotc.core.Types$Type.goThis$1(Types.scala:810)
+	at dotty.tools.dotc.core.Types$Type.go$1(Types.scala:703)
+	at dotty.tools.dotc.core.Types$Type.findMember(Types.scala:878)
+	at dotty.tools.dotc.core.Types$Type.memberBasedOnFlags(Types.scala:669)
+	at dotty.tools.dotc.core.Types$Type.member(Types.scala:653)
+	at dotty.tools.dotc.core.Types$Type.allMembers$$anonfun$1(Types.scala:1019)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:15)
+	at scala.runtime.function.JProcedure2.apply(JProcedure2.java:10)
+	at dotty.tools.dotc.core.Types$Type.memberDenots$$anonfun$1(Types.scala:924)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:937)
+	at scala.collection.immutable.BitmapIndexedSetNode.foreach(HashSet.scala:944)
+	at scala.collection.immutable.HashSet.foreach(HashSet.scala:944)
+	at dotty.tools.dotc.core.Types$Type.memberDenots(Types.scala:924)
+	at dotty.tools.dotc.core.Types$Type.allMembers(Types.scala:1019)
+	at scala.meta.internal.pc.IndexedContext$.accesibleMembers$1(IndexedContext.scala:133)
+	at scala.meta.internal.pc.IndexedContext$.scala$meta$internal$pc$IndexedContext$$$extractNames(IndexedContext.scala:188)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:83)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.IndexedContext$LazyWrapper.<init>(IndexedContext.scala:82)
+	at scala.meta.internal.pc.IndexedContext$.apply(IndexedContext.scala:71)
+	at scala.meta.internal.pc.PcDefinitionProvider.definitions(PcDefinitionProvider.scala:50)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.definition$$anonfun$1(ScalaPresentationCompiler.scala:114)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022.06.20 11:23:04 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 0.43s
+[31merror[39m: Others/tc.worksheet.sc:32:41: 
+Not enough type arguments for App.this.Alternative[F, A]
+expected: [F, A]
+actual:   [F]
+def guard[F[_]](p: Boolean)(implicit A: Alternative[F]): F[Unit] =
+                                        ^^^^^^^^^^^^^^
+2022.06.20 11:23:07 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 77ms
+[31merror[39m: Others/tc.worksheet.sc:32:56: identifier expected but ] found
+def guard[F[_]](p: Boolean)(implicit A: Alternative[F, ]): F[Unit] =
+                                                       ^
+2022.06.20 11:23:23 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 88ms
+[31merror[39m: Others/tc.worksheet.sc:33:31: 
+Found:    F[A.A]
+Required: F[Unit]
+
+where:    F is a type in method guard with bounds <: [_] =>> Any
+
+    if p then A.pure(()) else A.empty
+                              ^^^^^^^
+2022.06.20 11:23:25 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 71ms
+[31merror[39m: Others/tc.worksheet.sc:30:16: 
+class ListAlternative needs to be abstract, since def empty[A]: F[A] in trait Empty in class App is not defined 
+(The class implements a member with a different type: def empty: List[A] in class ListAlternative in class App)
+implicit class ListAlternative[A](self: List[A]) extends ListApplicative(self) with Alternative(self):
+               ^
+2022.06.20 11:24:02 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 94ms
+2022.06.20 11:24:06 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+2022.06.20 11:24:11 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.12s
+[31merror[39m: Others/tc.worksheet.sc:40:31: 
+no implicit argument of type App.this.Alternative[([_] =>> Any), ?] was found for parameter A of method guard in class App
+        _ <- guard(i % 2 == 0)
+                              ^
+2022.06.20 11:24:18 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 86ms
+[31merror[39m: Others/tc.worksheet.sc:40:31: 
+no implicit argument of type App.this.Alternative[([_] =>> Any), ?] was found for parameter A of method guard in class App
+        _ <- guard(i % 2 == 0)
+                              ^
+2022.06.20 11:24:25 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+[31merror[39m: Others/tc.worksheet.sc:40:32: 
+Found:    List[Any] => App.this.ListAlternative[Any]
+Required: App.this.Alternative[[_] =>> Any, ?]
+        _ <- guard(i % 2 == 0)(ListAlternative)
+                               ^^^^^^^^^^^^^^^
+2022.06.20 11:24:27 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 89ms
+[31merror[39m: Others/tc.worksheet.sc:40:14: 
+missing argument for parameter A of method guard in class App: (implicit A: App.this.Alternative[([_] =>> Any), ?]): ([_] =>> Any)[Unit]
+        _ <- guard(i % 2 == 0)()
+             ^^^^^^^^^^^^^^^^^^^
+2022.06.20 11:24:45 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+2022.06.20 11:24:50 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.13s
+[31merror[39m: Others/tc.worksheet.sc:40:31: 
+no implicit argument of type App.this.Alternative[([_] =>> Any), ?] was found for parameter A of method guard in class App
+        _ <- guard(i % 2 == 0)
+                              ^
+2022.06.20 11:25:06 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 98ms
+[31merror[39m: Others/tc.worksheet.sc:33:1: expected template body
+implicit class ListAlternative[A](self: List[A]) extends ListApplicative(self) with Alternative(self):
+^^^^^^^^
+2022.06.20 11:25:31 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 85ms
+[31merror[39m: Others/tc.worksheet.sc:44:31: 
+no implicit argument of type App.this.Alternative[([_] =>> Any), ?] was found for parameter A of method guard in class App
+        _ <- guard(i % 2 == 0)
+                              ^
+2022.06.20 11:25:32 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 90ms
+[31merror[39m: Others/tc.worksheet.sc:43:31: 
+no implicit argument of type App.this.Alternative[([_] =>> Any), ?] was found for parameter A of method guard in class App
+        _ <- guard(i % 2 == 0)
+                              ^
+2022.06.20 11:25:33 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 94ms
+[31merror[39m: Others/tc.worksheet.sc:43:31: 
+no implicit argument of type App.this.Alternative[([_] =>> Any), ?] was found for parameter A of method guard in class App
+        _ <- guard(i % 2 == 0)
+                              ^
+2022.06.20 11:25:53 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 97ms
+2022.06.20 11:25:56 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.16s
+[31merror[39m: Others/tc.worksheet.sc:43:32: 
+Found:    List[Any] => App.this.ListAlternative[Any]
+Required: App.this.Alternative[[_] =>> Any, ?]
+        _ <- guard(i % 2 == 0)(ListAlternative(_))
+                               ^^^^^^^^^^^^^^^^^^
+2022.06.20 11:25:58 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 90ms
+2022.06.20 11:26:00 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+2022.06.20 11:26:04 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+2022.06.20 11:26:41 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.17s
+2022.06.20 11:26:42 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+[31merror[39m: Others/tc.worksheet.sc:29:1: identifier expected but implicit found
+implicit class ListMonad[A](self: List[A]) extends ListApplicative(self) with Monad(self):
+^^^^^^^^
+2022.06.20 11:26:47 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 83ms
+[31merror[39m: Others/tc.worksheet.sc:27:41: 
+Missing type parameter for App.this.ListApplicative
+implicit object ListApplicative extends ListApplicative
+                                        ^^^^^^^^^^^^^^^
+2022.06.20 11:26:50 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 94ms
+[31merror[39m: Others/tc.worksheet.sc:27:41: 
+Too many type arguments for App.this.ListApplicative[A]
+expected: [A]
+actual:   [List, ]
+implicit object ListApplicative extends ListApplicative[List, ?]
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+2022.06.20 11:26:57 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 87ms
+[31merror[39m: Others/tc.worksheet.sc:27:57: 
+Type argument must be fully defined
+implicit object ListApplicative extends ListApplicative[?]
+                                                        ^
+2022.06.20 11:27:03 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 90ms
+[31merror[39m: Others/tc.worksheet.sc:27:57: 
+Type argument must be fully defined
+implicit object ListApplicative extends ListApplicative[_]
+                                                        ^
+2022.06.20 11:27:10 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 75ms
+2022.06.20 11:27:13 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.15s
+2022.06.20 11:27:23 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.12s
+[31merror[39m: Others/tc.worksheet.sc:34:56: 
+Not found: type *
+def guard[F[_]](p: Boolean)(implicit A: Alternative[F, *]): F[Unit] =
+                                                       ^
+2022.06.20 11:27:27 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 85ms
+2022.06.20 11:27:30 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.13s
+2022.06.20 11:27:33 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.13s
+2022.06.20 11:27:37 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.12s
+[31merror[39m: Others/tc.worksheet.sc:34:14: 
+type of implicit definition needs to be given explicitly
+implicit val ListApp = ListApplicative(Nil)
+             ^
+2022.06.20 11:28:11 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 82ms
+2022.06.20 11:28:30 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.17s
+2022.06.20 11:28:32 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.13s
+[31merror[39m: Others/tc.worksheet.sc:42:31: 
+no implicit argument of type App.this.Alternative[([_] =>> Any), ?] was found for parameter A of method guard in class App
+        _ <- guard(i % 2 == 0)
+                              ^
+2022.06.20 11:28:35 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 87ms
+2022.06.20 11:28:47 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.15s
+2022.06.20 11:28:49 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.15s
+2022.06.20 11:29:17 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.19s
+2022.06.20 11:29:19 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.15s
+2022.06.20 11:29:27 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.15s
+2022.06.20 11:29:46 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.17s
+2022.06.20 11:29:49 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+[31merror[39m: Others/tc.worksheet.sc:46:39: 
+Not found: type F
+def f(s: Int)(implicit A: Applicative[F, Int]) = A.pure(s)
+                                      ^
+2022.06.20 11:30:42 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 85ms
+2022.06.20 11:30:49 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+2022.06.20 11:30:51 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.17s
+[31merror[39m: Others/tc.worksheet.sc:48:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:30:52 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+[31merror[39m: Others/tc.worksheet.sc:35:14: 
+Double definition:
+implicit val ListAlt: App.this.Alternative[List, ?] in class App at line 50 and
+implicit val ListAlt: App.this.Alternative[List, ?] in class App at line 54
+
+implicit val ListAlt: Alternative[List, ?] = ListAlternative(Nil)
+             ^
+2022.06.20 11:30:58 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 95ms
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:31:01 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 96ms
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+[31merror[39m: Others/tc.worksheet.sc:35:14: 
+Double definition:
+implicit val ListAlt: App.this.Alternative[List, ?] in class App at line 50 and
+implicit val ListAlt: App.this.Alternative[List, ?] in class App at line 54
+
+implicit val ListAlt: Alternative[List, ?] = ListAlternative(Nil)
+             ^
+2022.06.20 11:31:13 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+[31merror[39m: Others/tc.worksheet.sc:35:14: 
+Double definition:
+implicit val ListAlt: App.this.Applicative[List, ?] in class App at line 50 and
+implicit val ListAlt: App.this.Alternative[List, ?] in class App at line 54
+
+implicit val ListAlt: Alternative[List, ?] = ListAlternative(Nil)
+             ^
+2022.06.20 11:31:21 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:31:24 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 96ms
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:31:27 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 89ms
+[31merror[39m: Others/tc.worksheet.sc:34:24: pattern must be a value
+implicit val ListAlt[A]: Alternative[List, ?] = ListAlternative(Nil)
+                       ^
+2022.06.20 11:31:35 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 71ms
+[31merror[39m: Others/tc.worksheet.sc:34:24: pattern must be a value
+implicit val ListAlt[A]: Alternative[List, A] = ListAlternative(Nil)
+                       ^
+2022.06.20 11:31:37 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 56ms
+[31merror[39m: Others/tc.worksheet.sc:34:41: 
+Not found: type A
+implicit val ListAlt: Alternative[List, A] = ListAlternative(Nil)
+                                        ^
+[31merror[39m: 
+tc.worksheet.sc:51 (mdoc generated code) 
+ Found:    (App.this.ListAlt : App.this.Alternative[List, <error Not found: type A>])
+Required: mdoc.internal.sourcecode.SourceStatement[Nothing]
+    $doc.binder(ListAlt, 33, 13, 33, 20);
+
+
+2022.06.20 11:31:42 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 89ms
+[31merror[39m: Others/tc.worksheet.sc:48:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:31:46 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+[31merror[39m: Others/tc.worksheet.sc:48:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:31:48 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 90ms
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:31:57 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:31:59 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 93ms
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:32:00 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:32:01 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 95ms
+[31merror[39m: Others/tc.worksheet.sc:49:4: 
+no implicit argument of type App.this.Applicative[([_] =>> Any), Int] was found for parameter A of method f in class App
+f(1)
+   ^
+2022.06.20 11:32:01 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 91ms
+[31merror[39m: Others/tc.worksheet.sc:49:6: 
+Found:    App.this.Applicative[List, ?1.CAP]
+Required: App.this.Applicative[Nothing, Int]
+
+where:    ?1 is an unknown value of type scala.runtime.TypeBox[Nothing, Any]
+
+f(1)(ListApp)
+     ^^^^^^^
+2022.06.20 11:32:02 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 90ms
+[31merror[39m: Others/tc.worksheet.sc:49:6: 
+Found:    App.this.Applicative[List, ?1.CAP]
+Required: App.this.Applicative[Nothing, Int]
+
+where:    ?1 is an unknown value of type scala.runtime.TypeBox[Nothing, Any]
+
+f(1)(ListApp)
+     ^^^^^^^
+2022.06.20 11:32:15 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 98ms
+[31merror[39m: Others/tc.worksheet.sc:49:6: 
+Found:    App.this.Applicative[List, ?1.CAP]
+Required: App.this.Applicative[Nothing, Int]
+
+where:    ?1 is an unknown value of type scala.runtime.TypeBox[Nothing, Any]
+
+f(1)(ListApp)
+     ^^^^^^^
+2022.06.20 11:32:17 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 88ms
+2022.06.20 11:32:19 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.17s
+2022.06.20 11:32:22 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+2022.06.20 11:32:29 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.15s
+2022.06.20 11:32:32 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.15s
+2022.06.20 11:32:36 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.18s
+2022.06.20 11:32:44 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+2022.06.20 11:32:46 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.17s
+2022.06.20 11:32:49 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+[31merror[39m: Others/tc.worksheet.sc:43:31: 
+no implicit argument of type App.this.Alternative[([_] =>> Any), ?] was found for parameter A of method guard in class App
+        _ <- guard(i % 2 == 0)
+                              ^
+2022.06.20 11:32:53 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+2022.06.20 11:32:55 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.17s
+[31merror[39m: Others/tc.worksheet.sc:47:56: 
+value <&> is not a member of F[Int]
+
+where:    F is a type in method f with bounds <: [_] =>> Any
+
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> List(_ + 1)
+                                                       ^^^^^^^^^^^^^
+[31merror[39m: Others/tc.worksheet.sc:47:75: 
+Missing parameter type
+
+I could not infer the type of the parameter _$9 of expanded function:
+_$9 => _$9 + 1.
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> List(_ + 1)
+                                                                          ^
+2022.06.20 11:33:29 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+[31merror[39m: Others/tc.worksheet.sc:47:56: 
+value <&> is not a member of F[Int]
+
+where:    F is a type in method f with bounds <: [_] =>> Any
+
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> A.pure(_ + 1)
+                                                       ^^^^^^^^^^^^^
+[31merror[39m: Others/tc.worksheet.sc:47:77: 
+Missing parameter type
+
+I could not infer the type of the parameter _$9 of expanded function:
+_$9 => _$9 + 1.
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> A.pure(_ + 1)
+                                                                            ^
+2022.06.20 11:33:42 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 97ms
+[31merror[39m: Others/tc.worksheet.sc:47:56: 
+value <&> is not a member of F[Int]
+
+where:    F is a type in method f with bounds <: [_] =>> Any
+
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> A.pure(_ + 1)
+                                                       ^^^^^^^^^^^^^
+[31merror[39m: Others/tc.worksheet.sc:47:77: 
+Missing parameter type
+
+I could not infer the type of the parameter _$9 of expanded function:
+_$9 => _$9 + 1.
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> A.pure(_ + 1)
+                                                                            ^
+2022.06.20 11:34:14 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.1s
+[31merror[39m: Others/tc.worksheet.sc:47:84: 
+Not found: type +
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> A.pure(_: Int + 1)
+                                                                                   ^
+[31merror[39m: Others/tc.worksheet.sc:47:56: 
+value <&> is not a member of F[Int]
+
+where:    F is a type in method f with bounds <: [_] =>> Any
+
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> A.pure(_: Int + 1)
+                                                       ^^^^^^^^^^^^^
+[31merror[39m: 
+tc.worksheet.sc:74 (mdoc generated code) 
+ Found:    (App.this.res0 : <error Not found: type +> => 
+  <error value <&> is not a member of F[Int]
+
+where:    F is a type in method f with bounds <: [_] =>> Any
+>
+)
+Required: mdoc.internal.sourcecode.SourceStatement[Nothing]
+    $doc.binder(res0, 48, 0, 48, 4);
+
+
+2022.06.20 11:34:46 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+[31merror[39m: Others/tc.worksheet.sc:47:56: 
+value <&> is not a member of F[Int]
+
+where:    F is a type in method f with bounds <: [_] =>> Any
+
+def f[F[_]](s: Int)(implicit A: Applicative[F, Int]) = A.pure(s) <&> A.pure((_: Int) + 1)
+                                                       ^^^^^^^^^^^^^
+2022.06.20 11:34:49 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 83ms
+2022.06.20 11:35:24 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.14s
+[31merror[39m: Others/tc.worksheet.sc:49:16: 
+Not found: A
+List(1,2,3)<&> A.pure((_: Int) + 1)
+               ^
+[31merror[39m: Others/tc.worksheet.sc:49:1: 
+Found:    List[Int]
+Required: ?{ <&> : ? }
+Note that implicit extension methods cannot be applied because they are ambiguous;
+both method ListMonad in class App and method ListApplicative in class App provide an extension method `<&>` on List[Int]
+List(1,2,3)<&> A.pure((_: Int) + 1)
+^^^^^^^^^^^
+2022.06.20 11:35:31 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.12s
+[31merror[39m: Others/tc.worksheet.sc:49:17: 
+Not found: A
+List(1,2,3) <&> A.pure((_: Int) + 1)
+                ^
+[31merror[39m: Others/tc.worksheet.sc:49:1: 
+Found:    List[Int]
+Required: ?{ <&> : ? }
+Note that implicit extension methods cannot be applied because they are ambiguous;
+both method ListMonad in class App and method ListApplicative in class App provide an extension method `<&>` on List[Int]
+List(1,2,3) <&> A.pure((_: Int) + 1)
+^^^^^^^^^^^
+2022.06.20 11:35:32 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.11s
+[31merror[39m: Others/tc.worksheet.sc:49:1: 
+Found:    List[Int]
+Required: ?{ <&> : ? }
+Note that implicit extension methods cannot be applied because they are ambiguous;
+both method ListMonad in class App and method ListApplicative in class App provide an extension method `<&>` on List[Int]
+List(1,2,3) <&> List((_: Int) + 1)
+^^^^^^^^^^^
+2022.06.20 11:35:42 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 99ms
+2022.06.20 11:36:16 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 0.15s
+2022.06.20 11:36:44 INFO  shutting down Metals
+2022.06.20 16:39:41 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/lsp.trace.json or /Users/yatchunglaw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.06.20 16:39:41 INFO  logging to file /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/metals.log
+2022.06.20 16:39:41 INFO  Started: Metals version 0.11.6 in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2' for client Visual Studio Code 1.68.1.
+2022.06.20 16:39:41 INFO  time: initialize in 0.3s
+2022.06.20 16:39:41 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.20 16:39:41 WARN  Build server is not auto-connectable.
+2022.06.20 16:39:41 WARN  no build tool detected in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.06.20 16:39:43 INFO  shutting down Metals
+2022.06.20 16:39:44 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/tc.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.20 16:39:44 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.20 16:39:46 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 3.17s
+2022.06.24 17:42:04 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/lsp.trace.json or /Users/yatchunglaw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.06.24 17:42:04 INFO  logging to file /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/metals.log
+2022.06.24 17:42:04 INFO  Started: Metals version 0.11.6 in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2' for client Visual Studio Code 1.68.1.
+2022.06.24 17:42:04 INFO  time: initialize in 0.32s
+2022.06.24 17:42:04 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.24 17:42:04 WARN  Build server is not auto-connectable.
+2022.06.24 17:42:04 WARN  no build tool detected in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.06.24 18:13:39 INFO  shutting down Metals
+2022.06.27 10:35:40 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/lsp.trace.json or /Users/yatchunglaw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.06.27 10:35:40 INFO  logging to file /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/metals.log
+2022.06.27 10:35:40 INFO  Started: Metals version 0.11.6 in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2' for client Visual Studio Code 1.68.1.
+2022.06.27 10:35:41 INFO  time: initialize in 0.3s
+2022.06.27 10:35:41 WARN  Flyway upgrade recommended: H2 2.1.212 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.06.27 10:35:41 WARN  Build server is not auto-connectable.
+2022.06.27 10:35:41 WARN  no build tool detected in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.06.27 10:35:45 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/tc.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.27 10:35:45 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/tc.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.27 10:35:45 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 3.35s
+2022.06.27 10:35:46 INFO  time: code lens generation in 4.02s
+2022.06.27 10:36:49 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/fu.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.2
+2022.06.27 10:36:49 INFO  time: evaluated worksheet 'fu.worksheet.sc' in 2.01s
+2022.06.27 10:37:23 INFO  shutting down Metals
+2022.07.06 17:13:01 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/lsp.trace.json or /Users/yatchunglaw/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.07.06 17:13:01 INFO  logging to file /Users/yatchunglaw/VSCodeProjects/Playground2/.metals/metals.log
+2022.07.06 17:13:01 INFO  Started: Metals version 0.11.7 in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2' for client Visual Studio Code 1.68.1.
+2022.07.06 17:13:01 INFO  time: initialize in 0.29s
+2022.07.06 17:13:01 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.07.06 17:13:01 WARN  Build server is not auto-connectable.
+2022.07.06 17:13:01 WARN  no build tool detected in workspace '/Users/yatchunglaw/VSCodeProjects/Playground2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.07.06 17:13:11 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/tc.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.3
+2022.07.06 17:13:11 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/tc.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.3
+2022.07.06 17:13:11 INFO  time: evaluated worksheet 'tc.worksheet.sc' in 7.77s
+2022.07.06 17:13:11 INFO  time: code lens generation in 5.27s
+2022.07.06 17:14:00 INFO  no build target found for /Users/yatchunglaw/VSCodeProjects/Playground2/Others/Arr.worksheet.sc. Using presentation compiler with project's scala-library version: 3.1.3
+2022.07.06 17:14:00 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 1.14s
+[31merror[39m: Others/Arr.worksheet.sc:1:5: Procedure syntax is not supported. Convert procedure `arr` to method by adding `: Unit =`.
+def arr[A, B, C](x: Expr[B => C])
+    ^^^
+2022.07.06 17:14:48 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.16s
+[31merror[39m: 
+Arr.worksheet.sc:9 (mdoc generated code) 
+ '{' expected, but identifier found
+    $doc.endStatement();
+
+
+[31merror[39m: 
+Arr.worksheet.sc:10 (mdoc generated code) 
+ '}' expected, but unindent found
+    $doc.endSection();
+
+
+[31merror[39m: Others/Arr.worksheet.sc:1:21: 
+Not found: type Expr
+def arr[A, B, C](x: Expr[B => C]) =
+                    ^^^^
+2022.07.06 17:15:25 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 76ms
+[31merror[39m: Others/Arr.worksheet.sc:2:31: illegal start of simple expression
+def arr(x: Expr[Int => Int]) =
+                              ^
+2022.07.06 17:15:49 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.13s
+[31merror[39m: Others/Arr.worksheet.sc:2:12: 
+Not found: type Expr
+def arr(x: Expr[Int => Int]) = ???
+           ^^^^
+2022.07.06 17:15:50 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 51ms
+[31merror[39m: Others/Arr.worksheet.sc:4:32: 
+value E is not a member of Nothing
+def arr(x: Expr[Int => Int]) = ??? E
+                               ^^^^^
+2022.07.06 17:16:25 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.11s
+2022.07.06 17:16:27 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.14s
+[31merror[39m: 
+Arr.worksheet.sc:12 (mdoc generated code) 
+ '{' expected, but identifier found
+    $doc.endStatement();
+
+
+[31merror[39m: 
+Arr.worksheet.sc:13 (mdoc generated code) 
+ '}' expected, but unindent found
+    $doc.endSection();
+
+
+[31merror[39m: Others/Arr.worksheet.sc:5:5: 
+value value is not a member of quoted.Expr[Int => Int]
+    x.value match
+    ^^^^^^^
+2022.07.06 17:16:52 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 86ms
+[31merror[39m: 
+Arr.worksheet.sc:12 (mdoc generated code) 
+ '{' expected, but identifier found
+    $doc.endStatement();
+
+
+[31merror[39m: 
+Arr.worksheet.sc:13 (mdoc generated code) 
+ '}' expected, but unindent found
+    $doc.endSection();
+
+
+[31merror[39m: Others/Arr.worksheet.sc:5:5: 
+value value is not a member of quoted.Expr[Int]
+    x.value match
+    ^^^^^^^
+2022.07.06 17:16:59 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 61ms
+[31merror[39m: 
+Arr.worksheet.sc:12 (mdoc generated code) 
+ '{' expected, but identifier found
+    $doc.endStatement();
+
+
+[31merror[39m: 
+Arr.worksheet.sc:13 (mdoc generated code) 
+ '}' expected, but unindent found
+    $doc.endSection();
+
+
+[31merror[39m: Others/Arr.worksheet.sc:5:5: 
+value value is not a member of quoted.Expr[Int => Int].
+An extension method was tried, but could not be fully constructed:
+
+    x$2.value[(Int => Int)](x)(quoted.FromExpr.CharFromExpr[T])
+    x.value match
+    ^^^^^^^
+2022.07.06 17:17:17 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.13s
+2022.07.06 17:17:26 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.13s
+[31merror[39m: Others/Arr.worksheet.sc:5:1: illegal start of simple expression
+
+^
+2022.07.06 17:17:28 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 91ms
+2022.07.06 17:17:30 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.14s
+[31merror[39m: Others/Arr.worksheet.sc:5:5: 
+Not found: f
+    f(1)
+    ^
+2022.07.06 17:17:53 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 45ms
+[31merror[39m: Others/Arr.worksheet.sc:5:5: 
+parameter x does not take parameters
+    x(1)
+    ^
+2022.07.06 17:17:57 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 57ms
+7月 06, 2022 5:18:10 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+嚴重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:77)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:76)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:66)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:65)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:65)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1652)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1651)
+	... 15 more
+
+7月 06, 2022 5:18:11 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+嚴重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:77)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:76)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:66)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:65)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:65)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1652)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1651)
+	... 15 more
+
+7月 06, 2022 5:18:12 下午 org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+嚴重: Internal error: java.lang.reflect.InvocationTargetException
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException: 6 is not a valid line number, allowed [0..5]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:179)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$4(Trees.scala:77)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:76)
+	at scala.meta.internal.metals.codeactions.PatternMatchRefactor.contribute(PatternMatchRefactor.scala:96)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:66)
+	at scala.meta.internal.metals.CodeActionProvider$$anonfun$1.applyOrElse(CodeActionProvider.scala:65)
+	at scala.collection.immutable.List.collect(List.scala:275)
+	at scala.meta.internal.metals.CodeActionProvider.codeActions(CodeActionProvider.scala:65)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeAction$1(MetalsLanguageServer.scala:1652)
+	at scala.meta.internal.metals.CancelTokens$.future(CancelTokens.scala:38)
+	at scala.meta.internal.metals.MetalsLanguageServer.codeAction(MetalsLanguageServer.scala:1651)
+	... 15 more
+
+[31merror[39m: Others/Arr.worksheet.sc:6:18: 
+no implicit argument of type quoted.FromExpr[(Int => Int)] was found for parameter x$2 of method unapply in object Expr.
+I found:
+
+    quoted.FromExpr.CharFromExpr[T]
+
+But given instance CharFromExpr in object FromExpr does not match type quoted.FromExpr[(Int => Int)].
+        case Expr(f) => f(x)
+                 ^
+[31merror[39m: Others/Arr.worksheet.sc:6:25: 
+Not found: f
+        case Expr(f) => f(x)
+                        ^
+2022.07.06 17:18:16 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.11s
+2022.07.06 17:19:08 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.12s
+[31merror[39m: Others/Arr.worksheet.sc:5:6: 
+access to variable x from wrong staging level:
+ - the definition is at level 0,
+ - but the access is at level 0.
+  ${ x += 1; 'x }
+     ^
+2022.07.06 17:19:17 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 0.1s
+2022.07.06 17:20:46 INFO  time: evaluated worksheet 'Arr.worksheet.sc' in 99ms
+7月 06, 2022 5:24:28 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+資訊: Unsupported notification method: $/setTrace

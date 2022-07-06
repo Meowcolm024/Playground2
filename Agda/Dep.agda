@@ -12,7 +12,7 @@ map f (x ∷ xs) = f x ∷ map f xs
 
 infixr 5 _++_
 
-_++_ : ∀ {A : Set} → List A → List A → List A
+_++_ : ∀ {a} {A : Set a} → List A → List A → List A
 []       ++ ys  =  ys
 (x ∷ xs) ++ ys  =  x ∷ (xs ++ ys)
 
@@ -21,39 +21,18 @@ record Monoid {a} (A : Set a) : Set a where
     mempty : A
     _<>_   : A → A → A
 
--- instance
---   ListMonoid : ∀ {a} {A : Set a} → Monoid (List A)
---   ListMonoid = record { mempty = []; _<>_ = _++_ }
+instance
+  ListMonoid : ∀ {a} {A : Set a} → Monoid (List A)
+  ListMonoid = record { mempty = []; _<>_ = _++_ }
 
 instance
     NatMonoid : Monoid Nat
     NatMonoid = record { mempty = 0; _<>_ = _+_ }
 
-data HList : List Set → Set where
-  hnil  : HList []
-  hcons : {x : Set} {xs : List Set} → x → HList xs → HList (x ∷ xs)
+open Monoid {{...}} public
 
-hd : {x : Set} {xs : List Set} → HList (x ∷ xs) → x
-hd (hcons h _) = h
-
-tl : {x : Set} {xs : List Set} → HList (x ∷ xs) → HList xs
-tl (hcons _ t) = t
-
-a : HList (Bool ∷ Nat ∷ Bool ∷ [])
-a = hcons false (hcons 1 (hcons true hnil))
-
-f : Bool → Set
-f true = Bool
-f false = Nat
-
-btst : List Bool → List Set
-btst [] = []
-btst (x ∷ xs) = f x ∷ btst xs
-
-initHList : (xs : List Bool) → HList (btst xs)
-initHList [] = hnil
-initHList (true ∷ xs) = hcons false (initHList xs)
-initHList (false ∷ xs) = hcons 0 (initHList xs)
+dup : ∀ {a} {A : Set a} {{_ : Monoid A}} → A → A
+dup m = m <> m
 
 inRange : Nat → Bool
 inRange x = (3 < x) && (9 < x)

@@ -19,6 +19,10 @@ trait Monoid[M]:
     def mempty: M
     def mappend(lhs: M, rhs: M): M
 
+trait MonoidK[M[_]]:
+    def mempty[A]: M[A]
+    def mappend[A](lhs: M[A], rhs: M[A]): M[A]
+
 implicit object OptionMonad extends Monad[Option]:
     def pure[A](x: A): Option[A] = Some(x)
     def bind[A, B](x: Option[A], f: A => Option[B]): Option[B] = x match
@@ -30,9 +34,9 @@ implicit object ListFunctor extends Functor[List]:
         case Nil   => Nil
         case x::xs => f(x)::fmap(xs, f)
 
-implicit object ListMonoid extends Monoid[List[?]]:
-    def mempty = Nil
-    def mappend(lhs: List[?], rhs: List[?]): List[?] = lhs ++ rhs
+implicit object ListMonoid extends MonoidK[List]:
+    def mempty[A] = Nil
+    def mappend[A](lhs: List[A], rhs: List[A]): List[A] = lhs ++ rhs
 
 implicit object intMonoid extends Monoid[Int]:
     def mempty = 0
@@ -44,9 +48,12 @@ def liftAdd1[F[_]](x: F[Int])(implicit functorT: Functor[F]): F[Int] =
 def dupMonoid[M](xs: M)(implicit monoidM: Monoid[M]): M =
     monoidM.mappend(xs, xs)
 
+def dupMonoidK[M[_], A](xs: M[A])(implicit monoidM: MonoidK[M]): M[A] =
+    monoidM.mappend(xs, xs)
+
 liftAdd1[Option](Some(2))
-liftAdd1(1::2::Nil)
-dupMonoid(1::2::3::Nil)(ListMonoid)
+liftAdd1(1::2::Nil)(ListFunctor)
+dupMonoidK(1::2::3::Nil)
 dupMonoid(6)
 
 trait FieldA[A]:
@@ -92,3 +99,26 @@ ic.set(5)
 ic.inc
 ic.get
 ic.access
+
+trait Alternative[F[_]] extends Applicative[F]:
+    def or[A](a: F[A], b: F[A]): F[A]
+    def empty[A]: F[A]
+
+implicit object ListAlternative extends Alternative[List]:
+    def or[A](a: List[A], b: List[A]): List[A] = a ++ b
+    def empty[A]: List[A] = Nil
+
+    def pure[A](x: A): List[A] = List(x)
+    def ap[A, B](f: List[A => B], x: List[A]): List[B] = f.flatMap(x.map)
+    override def fmap[A, B](v: List[A], f: A => B): List[B] = ListFunctor.fmap(v, f)
+
+def guard[F[_]](p: Boolean)(implicit A: Alternative[F]): F[Unit] =
+    if p then A.pure(()) else A.empty
+
+val ha =
+    for
+        i <- 1 to 10
+        _ <- guard(i % 2 == 0)
+    yield
+        i
+

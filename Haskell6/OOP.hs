@@ -103,3 +103,12 @@ test = do
     print =<< access c
     print =<< get c
     print =<< get d
+
+setCounterClass' :: CounterRep -> SetCounter -> SetCounter
+setCounterClass' r this = SetCounter
+    { getc = readIORef (_cx r)
+    , setc = writeIORef (_cx r)
+    , incc = do
+                 i <- get this
+                 set this (i + 1)
+    }
